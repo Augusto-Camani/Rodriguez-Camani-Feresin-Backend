@@ -103,3 +103,4 @@
 /mnt/def03521-b73d-43ac-bae6-c84e2a5e244b/PROYECTO FINAL/Rodriguez-Camani-Feresin-Backend/obj/Debug/net8.0/Rodriguez-Camani-Feresin-Backend.pdb
 /mnt/def03521-b73d-43ac-bae6-c84e2a5e244b/PROYECTO FINAL/Rodriguez-Camani-Feresin-Backend/obj/Debug/net8.0/Rodriguez-Camani-Feresin-Backend.genruntimeconfig.cache
 /mnt/def03521-b73d-43ac-bae6-c84e2a5e244b/PROYECTO FINAL/Rodriguez-Camani-Feresin-Backend/obj/Debug/net8.0/ref/Rodriguez-Camani-Feresin-Backend.dll
+/mnt/def03521-b73d-43ac-bae6-c84e2a5e244b/PROYECTO FINAL/Rodriguez-Camani-Feresin-Backend/obj/Debug/net8.0/Rodriguez-Camani-Feresin-Backend.sourcelink.json
