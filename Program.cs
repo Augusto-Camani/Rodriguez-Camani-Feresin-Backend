@@ -24,6 +24,7 @@ builder.Services.AddScoped<IAdminRepository, AdminRepository>();
 #endregion
 
 #region Services 
+builder.Services.AddScoped<IAdminService, AdminService>();
 #endregion
 
 var app = builder.Build();
