@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/Rodriguez-Camani-Feresin-Backend.props" />
+</Project>
