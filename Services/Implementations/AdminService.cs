@@ -13,38 +13,38 @@ public class AdminService : IAdminService
         _adminRepository= adminRepository;
     }
 
-    public void AddAdmin(Admin admin)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void DeleteUserById(int id)
-    {
-        throw new NotImplementedException();
-    }
-
-    public IEnumerable<Admin> GetAdmins()
-    {
-        throw new NotImplementedException();
-    }
-
-    public IEnumerable<Barber> GetBarbers()
-    {
-        throw new NotImplementedException();
-    }
-
-    public IEnumerable<Client> GetClients()
-    {
-        throw new NotImplementedException();
-    }
-
     public User GetUserById(int id)
     {
-        throw new NotImplementedException();
+       return _adminRepository.GetUserById(id);
     }
 
     public IEnumerable<User> GetUsers()
     {
-        throw new NotImplementedException();
+        return _adminRepository.GetUsers();
     }
+    public IEnumerable<Admin> GetAdmins()
+    {
+        return _adminRepository.GetAdmins();
+    }
+
+    public IEnumerable<Barber> GetBarbers()
+    {
+        return _adminRepository.GetBarbers();
+    }
+
+    public IEnumerable<Client> GetClients()
+    {
+        return _adminRepository.GetClients();
+    }
+
+    public void AddAdmin(Admin admin)
+    {
+        _adminRepository.AddAdmin(admin);
+    }
+
+    public void DeleteUserById(int id)
+    {
+        _adminRepository.DeleteUserById(id);
+    }
+
 }
