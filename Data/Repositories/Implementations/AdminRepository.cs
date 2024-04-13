@@ -9,15 +9,30 @@ namespace Rodriguez_Camani_Feresin_Backend
         public AdminRepository(RodriguezCamaniFeresinContext context) : base(context)
         {
         }
-
-        public IEnumerable<Admin> GetAll()
+        public IEnumerable<User> GetUsers()
+        {
+            return _context.Users;
+        }
+        public IEnumerable<Admin> GetAdmins()
         {
             return _context.Users.Where(u => u.UserType == "Admin").Select(u => (Admin)u).ToList();
         }
 
-        public Admin GetAdminById(int AdminId)
+        public IEnumerable<Barber> GetBarbers(){
+            return _context.Users.Where(u => u.UserType == "Barber").Select(u => (Barber)u).ToList();
+        }
+        public IEnumerable<Client> GetClients(){
+            return _context.Users.Where(u => u.UserType == "Client").Select(u => (Client)u).ToList();
+        }
+
+        public User GetUserById(int userId)
         {
-            return _context.Users.FirstOrDefault(u => u.Id == AdminId && u.UserType == "Admin") as Admin;
+            return _context.Users.SingleOrDefault(u => u.Id == userId);
+        }
+
+        public void DeleteUserById(int userId)
+        {
+          _context.Remove(GetUserById(userId));
         }
         public void AddAdmin(Admin admin)
         {
