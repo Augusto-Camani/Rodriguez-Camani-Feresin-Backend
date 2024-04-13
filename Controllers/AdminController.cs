@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Rodriguez_Camani_Feresin_Backend.Models;
 
 namespace Rodriguez_Camani_Feresin_Backend;
 
@@ -14,9 +15,8 @@ public class AdminController:ControllerBase
         
     }
 
-    [HttpGet("getAdmins")]
-    public IActionResult GetAdmins(){
-        return Ok(_adminService.GetAll());
+    [HttpGet]
+    public IActionResult GetUsers(){
+        return Ok(_adminService.GetUsers());
     }
-
 }
