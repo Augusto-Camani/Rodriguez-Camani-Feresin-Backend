@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q8ce8odUlBLpFfEnonYYDfQcvXvUc5R7KsMKVdT97hDaTp1wvAVTVSr/OeXWdlV9qtBHnyyINRhfoz6aLRGtOQ==",
+  "dgSpecHash": "gSNuOGXOseJUrrg3kHSnVqHCprWbjg03l+ITUKO5xf24b+6OS6XTDGrBw+HG36XcasaoxfSR0vBGZNIYqfHwRQ==",
   "success": true,
-  "projectFilePath": "/mnt/def03521-b73d-43ac-bae6-c84e2a5e244b/PROYECTO FINAL/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj",
+  "projectFilePath": "/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj",
   "expectedPackageFiles": [
     "/home/enano/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/enano/.nuget/packages/microsoft.aspnetcore.openapi/8.0.3/microsoft.aspnetcore.openapi.8.0.3.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/mnt/def03521-b73d-43ac-bae6-c84e2a5e244b/PROYECTO FINAL/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj": {}
+    "/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj": {}
   },
   "projects": {
-    "/mnt/def03521-b73d-43ac-bae6-c84e2a5e244b/PROYECTO FINAL/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj": {
+    "/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/mnt/def03521-b73d-43ac-bae6-c84e2a5e244b/PROYECTO FINAL/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj",
+        "projectUniqueName": "/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj",
         "projectName": "Rodriguez-Camani-Feresin-Backend",
-        "projectPath": "/mnt/def03521-b73d-43ac-bae6-c84e2a5e244b/PROYECTO FINAL/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj",
+        "projectPath": "/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj",
         "packagesPath": "/home/enano/.nuget/packages/",
-        "outputPath": "/mnt/def03521-b73d-43ac-bae6-c84e2a5e244b/PROYECTO FINAL/Rodriguez-Camani-Feresin-Backend/obj/",
+        "outputPath": "/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/enano/.nuget/NuGet/NuGet.Config"
