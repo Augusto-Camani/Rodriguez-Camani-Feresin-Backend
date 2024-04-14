@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Rodriguez_Camani_Feresin_Backend.Models;
 using Rodriguez_Camani_Feresin_Backend;
 using System.Reflection;
+using Rodriguez_Camani_Feresin_Backend.Data.Repositories.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,10 +26,12 @@ builder.Services.AddDbContext<RodriguezCamaniFeresinContext>(options =>
 #region Repositories
 builder.Services.AddScoped<IRepository, Repository>();
 builder.Services.AddScoped<IAdminRepository, AdminRepository>();
+//builder.Services.AddScoped<IClientRepository, ClientRepository>();
 #endregion
 
 #region Services 
 builder.Services.AddScoped<IAdminService, AdminService>();
+//builder.Services.AddScoped<IClientService, ClientService>();
 #endregion
 
 var app = builder.Build();
