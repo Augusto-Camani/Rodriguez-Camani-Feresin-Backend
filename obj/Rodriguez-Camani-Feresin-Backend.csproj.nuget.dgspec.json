@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj": {}
+    "C:\\Users\\fr300\\OneDrive\\Escritorio\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj": {}
   },
   "projects": {
-    "/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj": {
+    "C:\\Users\\fr300\\OneDrive\\Escritorio\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj",
+        "projectUniqueName": "C:\\Users\\fr300\\OneDrive\\Escritorio\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj",
         "projectName": "Rodriguez-Camani-Feresin-Backend",
-        "projectPath": "/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj",
-        "packagesPath": "/home/enano/.nuget/packages/",
-        "outputPath": "/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/obj/",
+        "projectPath": "C:\\Users\\fr300\\OneDrive\\Escritorio\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj",
+        "packagesPath": "C:\\Users\\fr300\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fr300\\OneDrive\\Escritorio\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/enano/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\fr300\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -87,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

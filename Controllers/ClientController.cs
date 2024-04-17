@@ -1,22 +1,21 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Rodriguez_Camani_Feresin_Backend.DTO;
-using Rodriguez_Camani_Feresin_Backend.Models;
+using Rodriguez_Camani_Feresin_Backend.Services.Implementations;
 using Rodriguez_Camani_Feresin_Backend.Services.Interfaces;
 
 namespace Rodriguez_Camani_Feresin_Backend.Controllers
 {
-    //[Route("/")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ClientController : ControllerBase
     {
         private readonly IClientService _clientService;
-        //private readonly IReviewService _reviewService;
+        private readonly IReviewService _reviewService;
         //private readonly IAppointmentService _appointmentService;
-        public ClientController(IClientService clientService)
+        public ClientController(IClientService clientService, IReviewService reviewService)
         {
             _clientService = clientService;
+            _reviewService = reviewService;
         }
         [HttpPost("CreateClient")]
         //[Authorize("All")]
@@ -37,23 +36,20 @@ namespace Rodriguez_Camani_Feresin_Backend.Controllers
             return Ok("Cliente Actualizado");
         }
 
-        //[HttpPost("CreateReview")]
+        [HttpPost("CreateReview")]
+        public IActionResult CreateReview([FromBody] int idturno, ReviewDTO reviewdto)
+        {
+            _reviewService.CreateReview(idturno, reviewdto);
+            return Ok();
+        }
+        [HttpPatch("UpdateReview/{idturno}")]
 
-        //public IActionResult CreateReview([FromBody] ReviewDTO reviewDto)
-        //{
-
-        //    _reviewService.CreateReview(reviewDto);
-        //    return StatusCode(201);
-        //}
-
-        //public IActionResult UpdateReview(int id, ReviewDTO reviewdto)
-        //{
-        //    if (_reviewService.GetReviewById(id) == null)
-        //    {
-        //        return BadRequest("La reseña no existe");
-        //    }
-        //    _reviewService.UpdateReview(id, reviewdto);
-        //    return Ok("Review Actualizada");
-        //}
+        // VER SI ENCUENTRA O NO EL TURNO
+        public IActionResult UpdateReview(int idturno, ReviewDTO reviewdto)
+        {
+            _reviewService.UpdateReview(idturno, reviewdto);
+            return Ok("Review Updated");
+        }
+        
     }
 }

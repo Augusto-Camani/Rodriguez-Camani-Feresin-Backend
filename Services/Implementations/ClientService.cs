@@ -9,7 +9,6 @@ namespace Rodriguez_Camani_Feresin_Backend.Services.Implementations
     {
         private readonly IClientRepository _clientRepository;
         //private readonly IMapper _mapper;
-        private readonly RodriguezCamaniFeresinContext _context;
         public ClientService(IClientRepository clientRepository)
         {
             _clientRepository = clientRepository;

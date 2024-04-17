@@ -27,11 +27,13 @@ builder.Services.AddDbContext<RodriguezCamaniFeresinContext>(options =>
 builder.Services.AddScoped<IRepository, Repository>();
 builder.Services.AddScoped<IAdminRepository, AdminRepository>();
 //builder.Services.AddScoped<IClientRepository, ClientRepository>();
+//builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
 #endregion
 
 #region Services 
 builder.Services.AddScoped<IAdminService, AdminService>();
 //builder.Services.AddScoped<IClientService, ClientService>();
+//builder.Services.AddScoped<IReviewService, ReviewService>();
 #endregion
 
 var app = builder.Build();
