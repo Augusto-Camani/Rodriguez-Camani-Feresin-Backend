@@ -8,16 +8,16 @@ namespace Rodriguez_Camani_Feresin_Backend.Models;
 
 public partial class RodriguezCamaniFeresinContext : DbContext
 {
-    public RodriguezCamaniFeresinContext()
-    {
-    }
-
     public RodriguezCamaniFeresinContext(DbContextOptions<RodriguezCamaniFeresinContext> options)
         : base(options)
     {
     }
 
     public virtual DbSet<User> Users { get; set; }
+    //public DbSet<Review> Reviews { get; set; }
+    //public DbSet<Barber> Barbers { get; set; }
+    //public DbSet<Client> Clients { get; set; }
+    //public DbSet<Appointments> Appointments { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

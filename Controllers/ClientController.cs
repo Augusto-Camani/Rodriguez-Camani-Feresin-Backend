@@ -11,11 +11,12 @@ namespace Rodriguez_Camani_Feresin_Backend.Controllers
     {
         private readonly IClientService _clientService;
         private readonly IReviewService _reviewService;
-        //private readonly IAppointmentService _appointmentService;
-        public ClientController(IClientService clientService, IReviewService reviewService)
+        private readonly IAppointmentService _appointmentService;
+        public ClientController(IClientService clientService, IReviewService reviewService, IAppointmentService appointmentService)
         {
             _clientService = clientService;
             _reviewService = reviewService;
+            _appointmentService = appointmentService;
         }
         [HttpPost("CreateClient")]
         //[Authorize("All")]
@@ -44,12 +45,19 @@ namespace Rodriguez_Camani_Feresin_Backend.Controllers
         }
         [HttpPatch("UpdateReview/{idturno}")]
 
-        // VER SI ENCUENTRA O NO EL TURNO
+        // VER SI ENCUENTRA O NO LA REVIEW
         public IActionResult UpdateReview(int idturno, ReviewDTO reviewdto)
         {
             _reviewService.UpdateReview(idturno, reviewdto);
             return Ok("Review Updated");
         }
-        
+
+        [HttpPost("CreateAppointment")]
+        public IActionResult CreateAppointment([FromBody] AppointmentDTO appointmentdto)
+        {
+            _appointmentService.CreateAppointment(appointmentdto);
+            return Ok();
+        }
+
     }
 }
