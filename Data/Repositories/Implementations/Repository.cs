@@ -4,13 +4,14 @@ namespace Rodriguez_Camani_Feresin_Backend;
 
 public class Repository : IRepository
 {
-    internal readonly RodriguezCamaniFeresinContext _context;
-    public Repository(RodriguezCamaniFeresinContext context)
+    internal readonly DbContextCFR _context;
+    public Repository(DbContextCFR context)
     {
         _context = context;
     }
 
-    public void SaveChanges(){
+    public void SaveChanges()
+    {
         _context.SaveChanges();
     }
 }

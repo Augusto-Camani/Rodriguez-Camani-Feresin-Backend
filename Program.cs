@@ -18,9 +18,9 @@ builder.Services.AddSwaggerGen(
 
 var configuration = builder.Configuration;
 
-builder.Services.AddDbContext<RodriguezCamaniFeresinContext>(options =>
-    options.UseMySql(configuration.GetConnectionString("MySQLConnection"), 
-       ServerVersion.Parse("8.0.36-mysql")));
+builder.Services.AddDbContext<DbContextCFR>(options =>
+    options.UseMySql(configuration.GetConnectionString("MySQLConnection"),
+    ServerVersion.Parse("8.0.36-mysql")));
 
 #region Repositories
 builder.Services.AddScoped<IRepository, Repository>();

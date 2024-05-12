@@ -6,7 +6,7 @@ namespace Rodriguez_Camani_Feresin_Backend
 {
     public class AdminRepository : Repository, IAdminRepository
     {
-        public AdminRepository(RodriguezCamaniFeresinContext context) : base(context)
+        public AdminRepository(DbContextCFR context) : base(context)
         {
         }
         public IEnumerable<User> GetUsers()
@@ -18,10 +18,12 @@ namespace Rodriguez_Camani_Feresin_Backend
             return _context.Users.Where(u => u.UserType == "Admin").Select(u => (Admin)u).ToList();
         }
 
-        public IEnumerable<Barber> GetBarbers(){
+        public IEnumerable<Barber> GetBarbers()
+        {
             return _context.Users.Where(u => u.UserType == "Barber").Select(u => (Barber)u).ToList();
         }
-        public IEnumerable<Client> GetClients(){
+        public IEnumerable<Client> GetClients()
+        {
             return _context.Users.Where(u => u.UserType == "Client").Select(u => (Client)u).ToList();
         }
 
@@ -32,7 +34,7 @@ namespace Rodriguez_Camani_Feresin_Backend
 
         public void DeleteUserById(int userId)
         {
-          _context.Remove(GetUserById(userId));
+            _context.Remove(GetUserById(userId));
         }
         public void AddAdmin(Admin admin)
         {
