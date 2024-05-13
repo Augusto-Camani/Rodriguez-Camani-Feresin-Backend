@@ -25,6 +25,21 @@ public class DbContextCFR : DbContext
             .HasValue<Barber>(UserType.Barber)
             .HasValue<Client>(UserType.Client);
 
+        modelBuilder.Entity<Client>(entity =>
+        {
+        });
+
+        modelBuilder.Entity<Appointment>(entity =>
+        {
+            entity.ToTable("Appointments");
+            entity.HasKey(e => e.AppointmentId);
+            entity.HasOne(ap => ap.Client)
+                .WithMany(cl => cl.Appointments)
+                .HasForeignKey(cl => cl.ClientId);
+            entity.HasOne(ap => ap.Barber)
+                .WithMany(br => br.Appointments)
+                .HasForeignKey(br => br.BarberId);
+        });
 
 
 

@@ -11,7 +11,7 @@ public class Appointment
     [Required]
     public DateTime DateTime { get; set; }
     public int ReceiptNumber { get; set; }
-    public string? Description { get; set; }
+    public string Description { get; set; }
 
     [ForeignKey("ClientId")]
     public Client Client { get; set; }

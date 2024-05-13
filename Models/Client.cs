@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Rodriguez_Camani_Feresin_Backend.Models;
 
 namespace Rodriguez_Camani_Feresin_Backend;
