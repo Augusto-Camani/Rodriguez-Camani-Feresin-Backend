@@ -9,7 +9,6 @@ public class Barber : User
     {
         UserType = Enums.UserType.Barber.ToString();
     }
-    public bool IsColourist { get; set; }
-    public bool IsHairdresser { get; set; }
+    public Specialties Specialties { get; set; }
     public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 }

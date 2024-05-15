@@ -15,6 +15,7 @@ public class Client : User
     public int ClientDNI { get; set; }
     public Gender Gender { get; set; }
     public Address Address { get; set; }
+    public int Age { get; set; }
     public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 
 }

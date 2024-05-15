@@ -8,6 +8,4 @@ public enum DaysOfTheWeek
     Friday,
     Saturday,
     Sunday
-
-
 }
