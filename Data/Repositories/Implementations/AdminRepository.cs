@@ -29,7 +29,7 @@ namespace Rodriguez_Camani_Feresin_Backend
 
         public User GetUserById(int userId)
         {
-            return _context.Users.SingleOrDefault(u => u.Id == userId);
+            return _context.Users.SingleOrDefault(u => u.UserId == userId);
         }
 
         public void DeleteUserById(int userId)
