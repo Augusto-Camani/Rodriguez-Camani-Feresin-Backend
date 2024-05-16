@@ -10,12 +10,11 @@ public class DbContextCFR : DbContext
     {
 
     }
-
     public DbSet<User> Users { get; set; }
     public DbSet<Barber> Barbers { get; set; }
     public DbSet<Client> Clients { get; set; }
     public DbSet<Appointment> Appointments { get; set; }
-    public DbSet<Review> Reviws { get; set; }
+    public DbSet<Review> Reviews { get; set; }
     public DbSet<Reply> Replies { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -27,7 +26,16 @@ public class DbContextCFR : DbContext
 
         modelBuilder.Entity<Client>(entity =>
         {
+            //entity.ToTable("Clients");
+            entity.HasMany(e => e.Appointments);
         });
+
+        modelBuilder.Entity<Barber>(entity =>
+        {
+            //entity.ToTable("Barbers");
+            entity.HasMany(e => e.Appointments);
+        }
+        );
 
         modelBuilder.Entity<Appointment>(entity =>
         {
@@ -39,8 +47,19 @@ public class DbContextCFR : DbContext
             entity.HasOne(ap => ap.Barber)
                 .WithMany(br => br.Appointments)
                 .HasForeignKey(br => br.BarberId);
+            entity.HasOne(ap => ap.Review)
+                .WithOne(re => re.Appointment)
+                .HasForeignKey<Review>(re => re.ReviewId);
         });
 
+        modelBuilder.Entity<Review>(entity =>
+        {
+            entity.ToTable("Reviwes");
+            entity.HasKey(e => e.ReviewId);
+            entity.HasOne(re => re.Reply)
+                .WithOne(rp => rp.Review)
+                .HasForeignKey<Reply>(rp => rp.ReviewId);
+        });
 
 
         base.OnModelCreating(modelBuilder);

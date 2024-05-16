@@ -15,16 +15,16 @@ namespace Rodriguez_Camani_Feresin_Backend
         }
         public IEnumerable<Admin> GetAdmins()
         {
-            return _context.Users.Where(u => u.UserType == "Admin").Select(u => (Admin)u).ToList();
+            return _context.Users.Where(u => u.UserType == Enums.UserType.Admin).Select(u => (Admin)u).ToList();
         }
 
         public IEnumerable<Barber> GetBarbers()
         {
-            return _context.Users.Where(u => u.UserType == "Barber").Select(u => (Barber)u).ToList();
+            return _context.Users.Where(u => u.UserType == Enums.UserType.Barber).Select(u => (Barber)u).ToList();
         }
         public IEnumerable<Client> GetClients()
         {
-            return _context.Users.Where(u => u.UserType == "Client").Select(u => (Client)u).ToList();
+            return _context.Users.Where(u => u.UserType == Enums.UserType.Client).Select(u => (Client)u).ToList();
         }
 
         public User GetUserById(int userId)

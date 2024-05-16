@@ -13,4 +13,9 @@ public class Review
     public string? Description { get; set; }
     public Reply Reply { get; set; }
 
+    [ForeignKey("AppointmentId")]
+
+    public Appointment Appointment { get; set; }
+    public int AppointmentId { get; set; }
+
 }

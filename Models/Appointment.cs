@@ -21,4 +21,8 @@ public class Appointment
 
     public Barber Barber { get; set; }
     public int BarberId { get; set; }
+
+    [ForeignKey("ReviewId")]
+    public Review Review { get; set; }
+    public int ReviewId { get; set; }
 }
