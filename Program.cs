@@ -17,15 +17,17 @@ builder.Services.AddDbContext<DbContextCFR>(options =>
     options.UseMySql(configuration.GetConnectionString("MySQLConnection"),
     ServerVersion.Parse("8.0.36-mysql")));
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 #region Repositories
 builder.Services.AddScoped<IRepository, Repository>();
-builder.Services.AddScoped<IAdminRepository, AdminRepository>();
+//builder.Services.AddScoped<IAdminRepository, AdminRepository>();
 //builder.Services.AddScoped<IClientRepository, ClientRepository>();
 //builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
 #endregion
 
 #region Services 
-builder.Services.AddScoped<IAdminService, AdminService>();
+//builder.Services.AddScoped<IAdminService, AdminService>();
 //builder.Services.AddScoped<IClientService, ClientService>();
 //builder.Services.AddScoped<IReviewService, ReviewService>();
 #endregion
