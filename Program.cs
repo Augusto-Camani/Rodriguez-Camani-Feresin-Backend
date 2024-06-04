@@ -25,7 +25,8 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 #endregion
 
 #region Services
-builder.Services.AddScoped<IPasswordHasher, PasswordHasher>(); 
+builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+builder.Services.AddScoped<IValidationService, ValidationService>();
 builder.Services.AddScoped<IUserService, UserService>();
 #endregion
 

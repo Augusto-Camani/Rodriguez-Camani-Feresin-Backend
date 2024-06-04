@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rodriguez-Camani-Feresin-Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8debdc3afe29014cc220d032f87e191053408ecc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10c52cd37b99bfbb04442768b485345d472c48dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rodriguez-Camani-Feresin-Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rodriguez-Camani-Feresin-Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

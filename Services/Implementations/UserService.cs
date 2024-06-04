@@ -8,15 +8,27 @@ public class UserService : IUserService
 {   
     private readonly IUserRepository _userRepository;
     private readonly IMapper _mapper;
+    private readonly IValidationService _validationService;
     private readonly IPasswordHasher _passwordHasher;
-    public UserService(IUserRepository userRepository, IMapper mapper, IPasswordHasher passwordHasher)
+    public UserService(IUserRepository userRepository, IMapper mapper, IValidationService validationService, IPasswordHasher passwordHasher)
     {
         _userRepository = userRepository;
         _mapper = mapper;
+        _validationService = validationService;
         _passwordHasher = passwordHasher;
     }
     public void AddAdmin(AdminDTO adminDTO)
-    {
+    {   
+         if (!_validationService.ValidateEmail(adminDTO.Email))
+        {
+            throw new ArgumentException("Invalid email address or password.");
+        }
+
+        if (!_validationService.ValidatePassword(adminDTO.PasswordHash))
+        {
+            throw new ArgumentException("Invalid email address or password.");
+        }
+
         var admin = _mapper.Map<Admin>(adminDTO);
         admin.PasswordHash = _passwordHasher.HashPassword(adminDTO.PasswordHash);
         _userRepository.AddAdmin(admin);
@@ -24,6 +36,16 @@ public class UserService : IUserService
 
     public void AddBarber(BarberDTO barberDTO)
     {
+        if (!_validationService.ValidateEmail(barberDTO.Email))
+        {
+            throw new ArgumentException("Invalid email address or password.");
+        }
+
+        if (!_validationService.ValidatePassword(barberDTO.PasswordHash))
+        {
+            throw new ArgumentException("Invalid email address or password.");
+        }
+
         var barber = _mapper.Map<Barber>(barberDTO);
         barber.PasswordHash = _passwordHasher.HashPassword(barberDTO.PasswordHash);
         _userRepository.AddBarber(barber);
@@ -31,6 +53,16 @@ public class UserService : IUserService
 
     public void AddUser(ClientDTO clientDTO)
     {
+        if (!_validationService.ValidateEmail(clientDTO.Email))
+        {
+            throw new ArgumentException("Invalid email address or password.");
+        }
+
+        if (!_validationService.ValidatePassword(clientDTO.PasswordHash))
+        {
+            throw new ArgumentException("Invalid email address or password.");
+        }
+
         var client = _mapper.Map<Client>(clientDTO);
         client.PasswordHash = _passwordHasher.HashPassword(clientDTO.PasswordHash);
         _userRepository.AddUser(client);
@@ -73,9 +105,16 @@ public class UserService : IUserService
             throw new Exception("Usuario inexistente");
         }
         else{
+
+        if (!_validationService.ValidatePassword(userDTO.PasswordHash))
+        {
+            throw new ArgumentException("Invalid email address or password.");
+        }
+
         var user = _mapper.Map<User>(userDTO);
         user.PasswordHash = _passwordHasher.HashPassword(userDTO.PasswordHash);
         _userRepository.UpdatePassword(user);
+        
         }
     }
 
