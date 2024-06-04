@@ -30,7 +30,8 @@ namespace Rodriguez_Camani_Feresin_Backend.Migrations
                     UserType = table.Column<int>(type: "int", nullable: false),
                     Specialties = table.Column<int>(type: "int", nullable: true),
                     Gender = table.Column<int>(type: "int", nullable: true),
-                    Age = table.Column<int>(type: "int", nullable: true)
+                    Age = table.Column<int>(type: "int", nullable: true),
+                    PhoneNumber = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {

@@ -11,5 +11,6 @@ public class Client : User
     }
     public Gender Gender { get; set; }
     public int Age { get; set; }
+    public int PhoneNumber { get; set; }
     public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 }

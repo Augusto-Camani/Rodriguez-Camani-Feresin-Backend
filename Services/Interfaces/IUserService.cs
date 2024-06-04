@@ -12,9 +12,8 @@ public interface IUserService
     public User GetUserByName(string name);
     public void AddUser(ClientDTO clientDTO);
     public void AddBarber(BarberDTO barberDTO);
-    public void AddAdmin(UserDTO adminDTO);
+    public void AddAdmin(AdminDTO adminDTO);
     public void UpdateUser(int id, UserDTO user);
+    public void UpdatePassword(int id, UserDTO user);
     public void DeleteUser(int id);
-    public bool IsValidEmail(string email);
-    public bool IsValidPassword(string password);
 }

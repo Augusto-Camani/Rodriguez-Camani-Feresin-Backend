@@ -12,7 +12,8 @@ public interface IUserRepository
     public void AddUser(Client client);
     public void AddBarber(Barber barber);
     public void AddAdmin(Admin admin);
-    public void UpdateUser(int id, User user);
+    public void UpdateUser(User user);
+     public void UpdatePassword(User user);
     public void DeleteUser(int id);
     BaseResponse ValidateUser(AuthenticationRequestBody authenticationRequestBody);
 }

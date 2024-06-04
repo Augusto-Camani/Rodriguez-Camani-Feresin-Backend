@@ -56,9 +56,16 @@ public class UserRepository : IUserRepository
         return _context.Users.SingleOrDefault(u => u.UserName == name);
     }
 
-    public void UpdateUser(int id, User user)
+    public void UpdatePassword(User user)
     {
-        throw new NotImplementedException();
+        _context.Update(user);
+        _context.SaveChanges();
+    }
+
+    public void UpdateUser(User user)
+    {
+        _context.Update(user);
+        _context.SaveChanges();
     }
 
     public BaseResponse ValidateUser(AuthenticationRequestBody authenticationRequestBody)

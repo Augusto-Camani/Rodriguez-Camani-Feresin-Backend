@@ -12,7 +12,7 @@ using Rodriguez_Camani_Feresin_Backend;
 namespace Rodriguez_Camani_Feresin_Backend.Migrations
 {
     [DbContext(typeof(DbContextCFR))]
-    [Migration("20240516202524_InitialCreate")]
+    [Migration("20240604022331_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -161,6 +161,9 @@ namespace Rodriguez_Camani_Feresin_Backend.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("Gender")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PhoneNumber")
                         .HasColumnType("int");
 
                     b.HasDiscriminator().HasValue(2);

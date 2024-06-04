@@ -21,15 +21,12 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 #region Repositories
 builder.Services.AddScoped<IRepository, Repository>();
-//builder.Services.AddScoped<IAdminRepository, AdminRepository>();
-//builder.Services.AddScoped<IClientRepository, ClientRepository>();
-//builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 #endregion
 
-#region Services 
-//builder.Services.AddScoped<IAdminService, AdminService>();
-//builder.Services.AddScoped<IClientService, ClientService>();
-//builder.Services.AddScoped<IReviewService, ReviewService>();
+#region Services
+builder.Services.AddScoped<IPasswordHasher, PasswordHasher>(); 
+builder.Services.AddScoped<IUserService, UserService>();
 #endregion
 
 var app = builder.Build();

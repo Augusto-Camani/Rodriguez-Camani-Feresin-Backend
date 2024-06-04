@@ -160,6 +160,9 @@ namespace Rodriguez_Camani_Feresin_Backend.Migrations
                     b.Property<int>("Gender")
                         .HasColumnType("int");
 
+                    b.Property<int>("PhoneNumber")
+                        .HasColumnType("int");
+
                     b.HasDiscriminator().HasValue(2);
                 });
 
