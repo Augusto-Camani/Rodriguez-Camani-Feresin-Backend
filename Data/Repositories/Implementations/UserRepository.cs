@@ -12,17 +12,20 @@ public class UserRepository : IUserRepository
 
     public void AddAdmin(Admin admin)
     {
-        throw new NotImplementedException();
+       _context.Add(admin);
+       _context.SaveChanges();
     }
 
     public void AddBarber(Barber barber)
     {
-        throw new NotImplementedException();
+       _context.Add(barber);
+       _context.SaveChanges();
     }
 
     public void AddUser(Client client)
     {
-        throw new NotImplementedException();
+        _context.Add(client);
+        _context.SaveChanges();
     }
 
     public void DeleteUser(int id)
@@ -68,8 +71,4 @@ public class UserRepository : IUserRepository
         _context.SaveChanges();
     }
 
-    public BaseResponse ValidateUser(AuthenticationRequestBody authenticationRequestBody)
-    {
-        throw new NotImplementedException();
-    }
 }

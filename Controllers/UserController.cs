@@ -40,8 +40,15 @@ public class UserController : ControllerBase
 
     [HttpPost("add-admin")]
     public IActionResult AddAdmin([FromBody] AdminDTO adminDTO){
-        _userService.AddAdmin(adminDTO);
-        return Created();
+        try{
+            _userService.AddAdmin(adminDTO);
+            return Created(); 
+        }
+        catch(ArgumentException ex)
+        {
+            return BadRequest(ex);
+        }
+        
     }
 
     [HttpPost("add-barber")]

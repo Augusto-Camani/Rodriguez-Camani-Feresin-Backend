@@ -1,28 +1,65 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using Rodriguez_Camani_Feresin_Backend.Models;
 
 namespace Rodriguez_Camani_Feresin_Backend;
 
 [Route("api/[controller]")]
 [ApiController]
 public class AuthenticationController : ControllerBase
-{   
-    private readonly IUserService _userService;
+{
     private readonly IAuthenticationService _authenticationService;
-    public AuthenticationController(IUserService userService ,IAuthenticationService authenticationService)
+    private readonly IUserService _userService;
+    private readonly IConfiguration _config;
+
+    public AuthenticationController(IAuthenticationService authenticationService, IUserService userService, IConfiguration config)
     {
-        _userService = userService;
         _authenticationService = authenticationService;
+        _userService = userService;
+        _config = config;
     }
 
-    
     [HttpPost]
-    public IActionResult Loggin([FromBody] UserDTO userDTO){
-        var user = _userService.GetUserByName(userDTO.UserName);
-        if(user != null)
+    public IActionResult Authenticate([FromBody] AuthenticationRequestBody authenticationRequestBody)
+    {
+        BaseResponse validateUserResult = _authenticationService.ValidateUser(authenticationRequestBody);
+        if (validateUserResult.Message == "wrong username")
         {
-            return Ok();
+            return NotFound("User not found."); // 404 Not Found si el usuario no existe
+        }
+        else if (validateUserResult.Message == "wrong password")
+        {
+            return Unauthorized("Invalid password."); // 401 Unauthorized si la contraseña es incorrecta
         }
 
-        return NotFound();
+        if (validateUserResult.Result)
+        {
+            User user = _userService.GetUserByName(authenticationRequestBody.UserName);
+            var securityPassword = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_config["Authentication:SecretForKey"]));
+            var signature = new SigningCredentials(securityPassword, SecurityAlgorithms.HmacSha256);
+
+            var claimsForToken = new List<Claim>
+            {
+                new Claim("sub", user.UserId.ToString()),
+                new Claim("username", user.UserName),
+                new Claim("usertype", user.UserType.ToString())
+            };
+
+            var jwtSecurityToken = new JwtSecurityToken(
+                _config["Authentication:Issuer"],
+                _config["Authentication:Audience"],
+                claimsForToken,
+                DateTime.UtcNow,
+                DateTime.UtcNow.AddHours(1),
+                signature);
+
+            string tokenToReturn = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
+            return Ok(tokenToReturn); // 200 OK si la autenticación es exitosa
+        }
+
+        return BadRequest(); // 400 Bad Request si algo más falla
     }
 }

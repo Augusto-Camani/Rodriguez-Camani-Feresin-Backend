@@ -15,5 +15,4 @@ public interface IUserRepository
     public void UpdateUser(User user);
      public void UpdatePassword(User user);
     public void DeleteUser(int id);
-    BaseResponse ValidateUser(AuthenticationRequestBody authenticationRequestBody);
 }

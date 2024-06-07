@@ -16,5 +16,4 @@ public interface IUserService
     public void UpdateUser(int id, UserDTO user);
     public void UpdatePassword(int id, UserDTO user);
     public void DeleteUser(int id);
-    public bool ValidateUser(UserDTO userDTO);
 }

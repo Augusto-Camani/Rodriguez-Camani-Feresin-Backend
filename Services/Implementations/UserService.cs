@@ -19,12 +19,7 @@ public class UserService : IUserService
     }
     public void AddAdmin(AdminDTO adminDTO)
     {   
-         if (!_validationService.ValidateEmail(adminDTO.Email))
-        {
-            throw new ArgumentException("Invalid email address or password.");
-        }
-
-        if (!_validationService.ValidatePassword(adminDTO.PasswordHash))
+         if (!_validationService.ValidateEmail(adminDTO.Email) || !_validationService.ValidatePassword(adminDTO.PasswordHash) )
         {
             throw new ArgumentException("Invalid email address or password.");
         }
@@ -36,12 +31,7 @@ public class UserService : IUserService
 
     public void AddBarber(BarberDTO barberDTO)
     {
-        if (!_validationService.ValidateEmail(barberDTO.Email))
-        {
-            throw new ArgumentException("Invalid email address or password.");
-        }
-
-        if (!_validationService.ValidatePassword(barberDTO.PasswordHash))
+        if (!_validationService.ValidateEmail(barberDTO.Email) || !_validationService.ValidatePassword(barberDTO.PasswordHash))
         {
             throw new ArgumentException("Invalid email address or password.");
         }
@@ -53,12 +43,7 @@ public class UserService : IUserService
 
     public void AddUser(ClientDTO clientDTO)
     {
-        if (!_validationService.ValidateEmail(clientDTO.Email))
-        {
-            throw new ArgumentException("Invalid email address or password.");
-        }
-
-        if (!_validationService.ValidatePassword(clientDTO.PasswordHash))
+        if (!_validationService.ValidateEmail(clientDTO.Email) || !_validationService.ValidatePassword(clientDTO.PasswordHash))
         {
             throw new ArgumentException("Invalid email address or password.");
         }
@@ -132,15 +117,5 @@ public class UserService : IUserService
             _userRepository.UpdateUser(user); 
         }
     
-    }
-
-    public bool ValidateUser(UserDTO userDTO){
-        var user = _userRepository.GetUserByName(userDTO.UserName);
-        if (user == null)
-        {
-            return false;
-        }
-
-        return _passwordHasher.Verify(user.PasswordHash, userDTO.PasswordHash);
     }
 }
