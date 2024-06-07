@@ -1,4 +1,7 @@
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Rodriguez_Camani_Feresin_Backend;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +15,27 @@ builder.Services.AddSwaggerGen(
 );
 
 var configuration = builder.Configuration;
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}
+).AddJwtBearer(
+    options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters 
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+    }
+);
 
 builder.Services.AddDbContext<DbContextCFR>(options =>
     options.UseMySql(configuration.GetConnectionString("MySQLConnection"),
@@ -27,6 +51,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 #region Services
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 builder.Services.AddScoped<IValidationService, ValidationService>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<IUserService, UserService>();
 #endregion
 
@@ -39,5 +64,8 @@ app.UseSwaggerUI();
 
 
 app.UseHttpsRedirection();
+
+app.UseAuthorization();
+app.UseAuthorization();
 
 app.Run();

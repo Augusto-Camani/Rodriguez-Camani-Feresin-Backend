@@ -133,4 +133,14 @@ public class UserService : IUserService
         }
     
     }
+
+    public bool ValidateUser(UserDTO userDTO){
+        var user = _userRepository.GetUserByName(userDTO.UserName);
+        if (user == null)
+        {
+            return false;
+        }
+
+        return _passwordHasher.Verify(user.PasswordHash, userDTO.PasswordHash);
+    }
 }

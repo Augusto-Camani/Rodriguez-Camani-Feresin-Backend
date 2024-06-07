@@ -210,4 +210,12 @@
 /mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/obj/Debug/net8.0/Rodriguez-Camani-Feresin-Backend.genruntimeconfig.cache
 /mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/obj/Debug/net8.0/ref/Rodriguez-Camani-Feresin-Backend.dll
 /mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/bin/Debug/net8.0/AutoMapper.dll
-/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/obj/Debug/net8.0/Rodriguez-Camani-Feresin-Backend.csproj.CopyComplete
+/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/mnt/4c885218-bdee-4a36-b836-c1988b7eb0d4/Proyecto-final/Rodriguez-Camani-Feresin-Backend/obj/Debug/net8.0/Rodrigue.1FE7FFF5.Up2Date
