@@ -85,37 +85,37 @@ public class UserService : IUserService
 
     public void UpdatePassword(int id, UserDTO userDTO)
     {
+        
         var existingUser = _userRepository.GetUserById(id);
-        if(existingUser == null){
+        if (existingUser == null)
+        {
             throw new Exception("Usuario inexistente");
         }
-        else{
 
+        
         if (!_validationService.ValidatePassword(userDTO.PasswordHash))
         {
-            throw new ArgumentException("Invalid email address or password.");
+            throw new ArgumentException("Invalid password.");
         }
 
-        var user = _mapper.Map<User>(userDTO);
-        user.PasswordHash = _passwordHasher.HashPassword(userDTO.PasswordHash);
-        _userRepository.UpdatePassword(user);
         
-        }
+        existingUser.PasswordHash = _passwordHasher.HashPassword(userDTO.PasswordHash);
+
+        
+        _userRepository.UpdatePassword(existingUser);
     }
 
+
     public void UpdateUser(int id, UserDTO userDTO)
-    {   
+    {
+        // Obtener el usuario existente
         var existingUser = _userRepository.GetUserById(id);
-        if(existingUser == null)
+        if (existingUser == null)
         {
             throw new Exception("Usuario inexistente");
         }
-        else
-        {
-            var user = _mapper.Map<User>(userDTO);
-            user.UserName = userDTO.UserName;
-            _userRepository.UpdateUser(user); 
-        }
-    
+        existingUser.UserName = userDTO.UserName;
+        _userRepository.UpdateUser(existingUser);
     }
+
 }

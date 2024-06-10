@@ -71,7 +71,7 @@ public class UserController : ControllerBase
 
     [HttpPatch("change-user-name")]
     public IActionResult ChangeUserName([FromQuery] int id, [FromBody] UserDTO userDTO){
-        _userService.UpdatePassword(id, userDTO);
+        _userService.UpdateUser(id, userDTO);
         return NoContent();
     }
 

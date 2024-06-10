@@ -56,6 +56,7 @@ public class UserRepository : IUserRepository
 
     public User GetUserByName(string name)
     {
+        //SI hay mas de uno con el mismo nombre tira error.
         return _context.Users.SingleOrDefault(u => u.UserName == name);
     }
 
