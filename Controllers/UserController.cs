@@ -75,9 +75,17 @@ public class UserController : ControllerBase
         return NoContent();
     }
 
-    [HttpDelete("delete-user")]
-    public IActionResult DeleteUser([FromQuery] int id){
+    [HttpDelete("delete-user/{id}")]
+    public IActionResult DeleteUser(int id)
+    {
+        var user = _userService.GetUserById(id);
+        if (user == null)
+        {
+            return NotFound();
+        }
+
         _userService.DeleteUser(id);
         return NoContent();
     }
+
 }

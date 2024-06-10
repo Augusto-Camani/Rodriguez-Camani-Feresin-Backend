@@ -7,7 +7,7 @@ using Rodriguez_Camani_Feresin_Backend.Models;
 
 namespace Rodriguez_Camani_Feresin_Backend;
 
-[Route("api/[controller]")]
+[Route("/[controller]")]
 [ApiController]
 public class AuthenticationController : ControllerBase
 {
