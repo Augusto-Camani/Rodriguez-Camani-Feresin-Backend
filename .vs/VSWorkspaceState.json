@@ -1,6 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\bin",
+    "\\bin\\Debug",
+    "\\bin\\Release",
+    "\\obj",
+    "\\obj\\Debug",
+    "\\obj\\Release",
+    "\\Profiles",
+    "\\Properties",
+    "\\Services",
+    "\\Services\\Implementations"
   ],
   "SelectedNode": "\\Rodriguez-Camani-Feresin-Backend.sln",
   "PreviewInSolutionExplorer": false

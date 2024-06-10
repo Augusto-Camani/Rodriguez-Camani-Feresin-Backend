@@ -7,14 +7,22 @@ using Rodriguez_Camani_Feresin_Backend;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("Policys",
+        builder => builder
+            .WithOrigins("http://localhost:5175")
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
 
-// Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(
 );
 
 var configuration = builder.Configuration;
+
 
 builder.Services.AddAuthentication(options =>
 {
@@ -62,10 +70,16 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 app.UseAuthorization();
 app.MapControllers();
+app.UseCors("Policys");
 app.Run();
