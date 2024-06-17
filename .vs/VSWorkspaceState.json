@@ -2,13 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\Abstractions",
-    "\\bin\\Release",
+    "\\Controllers",
     "\\Models",
     "\\Profiles",
     "\\Properties",
     "\\Services",
     "\\Services\\Implementations"
   ],
-  "SelectedNode": "\\Abstractions\\PasswordHasher.cs",
+  "SelectedNode": "\\MyDatabase.db",
   "PreviewInSolutionExplorer": false
 }

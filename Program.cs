@@ -49,9 +49,14 @@ builder.Services.AddAuthentication(options =>
     }
 );
 
+// builder.Services.AddDbContext<DbContextCFR>(options =>
+//     options.UseMySql(configuration.GetConnectionString("MySQLConnection"),
+//     ServerVersion.Parse("8.0.36-mysql")));
+
 builder.Services.AddDbContext<DbContextCFR>(options =>
-    options.UseMySql(configuration.GetConnectionString("MySQLConnection"),
-    ServerVersion.Parse("8.0.36-mysql")));
+{
+    options.UseSqlite("DataSource=MyDatabase.db");
+});
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

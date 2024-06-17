@@ -2,7 +2,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Rodriguez_Camani_Feresin_Backend;
@@ -12,45 +11,39 @@ using Rodriguez_Camani_Feresin_Backend;
 namespace Rodriguez_Camani_Feresin_Backend.Migrations
 {
     [DbContext(typeof(DbContextCFR))]
-    [Migration("20240617144749_Second-Migration")]
-    partial class SecondMigration
+    [Migration("20240617205144_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.5")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
-
-            MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
+            modelBuilder.HasAnnotation("ProductVersion", "8.0.6");
 
             modelBuilder.Entity("Rodriguez_Camani_Feresin_Backend.Appointment", b =>
                 {
                     b.Property<int>("AppointmentId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("AppointmentId"));
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("BarberId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("ClientId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("DateTime")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("ReceiptNumber")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("ReviewId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("AppointmentId");
 
@@ -65,24 +58,22 @@ namespace Rodriguez_Camani_Feresin_Backend.Migrations
                 {
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("UserId"));
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("UserType")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("UserId");
 
@@ -97,16 +88,14 @@ namespace Rodriguez_Camani_Feresin_Backend.Migrations
                 {
                     b.Property<int>("ReplyId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ReplyId"));
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Response")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("ReviewId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("ReplyId");
 
@@ -120,26 +109,26 @@ namespace Rodriguez_Camani_Feresin_Backend.Migrations
                 {
                     b.Property<int>("ReviewId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("AppointmentId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("CreationDate")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
-                        .HasColumnType("longtext");
+                        .HasColumnType("TEXT");
 
                     b.Property<decimal>("Rating")
-                        .HasColumnType("decimal(65,30)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("UserId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("ReviewId");
 
@@ -160,7 +149,7 @@ namespace Rodriguez_Camani_Feresin_Backend.Migrations
                     b.HasBaseType("Rodriguez_Camani_Feresin_Backend.Models.User");
 
                     b.Property<int>("Specialties")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.HasDiscriminator().HasValue(1);
                 });
@@ -170,10 +159,10 @@ namespace Rodriguez_Camani_Feresin_Backend.Migrations
                     b.HasBaseType("Rodriguez_Camani_Feresin_Backend.Models.User");
 
                     b.Property<int>("Age")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("PhoneNumber")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.HasDiscriminator().HasValue(2);
                 });

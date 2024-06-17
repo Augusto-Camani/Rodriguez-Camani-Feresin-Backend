@@ -1,5 +1,4 @@
 ﻿using System;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -12,46 +11,37 @@ namespace Rodriguez_Camani_Feresin_Backend.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterDatabase()
-                .Annotation("MySql:CharSet", "utf8mb4");
-
             migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
-                    UserId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    UserName = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    PasswordHash = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Email = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    UserType = table.Column<int>(type: "int", nullable: false),
-                    Specialties = table.Column<int>(type: "int", nullable: true),
-                    Gender = table.Column<int>(type: "int", nullable: true),
-                    Age = table.Column<int>(type: "int", nullable: true),
-                    PhoneNumber = table.Column<int>(type: "int", nullable: true)
+                    UserId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    UserName = table.Column<string>(type: "TEXT", nullable: false),
+                    PasswordHash = table.Column<string>(type: "TEXT", nullable: false),
+                    Email = table.Column<string>(type: "TEXT", nullable: false),
+                    UserType = table.Column<int>(type: "INTEGER", nullable: false),
+                    Specialties = table.Column<int>(type: "INTEGER", nullable: true),
+                    Age = table.Column<int>(type: "INTEGER", nullable: true),
+                    PhoneNumber = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.UserId);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
+                });
 
             migrationBuilder.CreateTable(
                 name: "Appointments",
                 columns: table => new
                 {
-                    AppointmentId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    DateTime = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    ReceiptNumber = table.Column<int>(type: "int", nullable: false),
-                    Description = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    ClientId = table.Column<int>(type: "int", nullable: false),
-                    BarberId = table.Column<int>(type: "int", nullable: false),
-                    ReviewId = table.Column<int>(type: "int", nullable: false)
+                    AppointmentId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    DateTime = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    ReceiptNumber = table.Column<int>(type: "INTEGER", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: false),
+                    ClientId = table.Column<int>(type: "INTEGER", nullable: false),
+                    BarberId = table.Column<int>(type: "INTEGER", nullable: false),
+                    ReviewId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -68,18 +58,20 @@ namespace Rodriguez_Camani_Feresin_Backend.Migrations
                         principalTable: "Users",
                         principalColumn: "UserId",
                         onDelete: ReferentialAction.Cascade);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
+                });
 
             migrationBuilder.CreateTable(
                 name: "Reviwes",
                 columns: table => new
                 {
-                    ReviewId = table.Column<int>(type: "int", nullable: false),
-                    Rating = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
-                    Description = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    AppointmentId = table.Column<int>(type: "int", nullable: false)
+                    ReviewId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    UserName = table.Column<string>(type: "TEXT", nullable: false),
+                    Rating = table.Column<decimal>(type: "TEXT", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: true),
+                    AppointmentId = table.Column<int>(type: "INTEGER", nullable: false),
+                    UserId = table.Column<int>(type: "INTEGER", nullable: false),
+                    CreationDate = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -90,18 +82,22 @@ namespace Rodriguez_Camani_Feresin_Backend.Migrations
                         principalTable: "Appointments",
                         principalColumn: "AppointmentId",
                         onDelete: ReferentialAction.Cascade);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
+                    table.ForeignKey(
+                        name: "FK_Reviwes_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "UserId",
+                        onDelete: ReferentialAction.Cascade);
+                });
 
             migrationBuilder.CreateTable(
                 name: "Replies",
                 columns: table => new
                 {
-                    ReplyId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    ReviewId = table.Column<int>(type: "int", nullable: false),
-                    Response = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4")
+                    ReplyId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    ReviewId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Response = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -112,8 +108,7 @@ namespace Rodriguez_Camani_Feresin_Backend.Migrations
                         principalTable: "Reviwes",
                         principalColumn: "ReviewId",
                         onDelete: ReferentialAction.Cascade);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Appointments_BarberId",
@@ -130,6 +125,11 @@ namespace Rodriguez_Camani_Feresin_Backend.Migrations
                 table: "Replies",
                 column: "ReviewId",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Reviwes_UserId",
+                table: "Reviwes",
+                column: "UserId");
         }
 
         /// <inheritdoc />
