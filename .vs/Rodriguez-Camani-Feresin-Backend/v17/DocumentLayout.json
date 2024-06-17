@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\services\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:services\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\dto\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:dto\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\services\\implementations\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:services\\implementations\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\data\\repositories\\implementations\\reviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:data\\repositories\\implementations\\reviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,34 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 10,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ReviewController.cs",
-              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Controllers\\ReviewController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReviewController.cs",
-              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Controllers\\ReviewController.cs",
-              "RelativeToolTip": "Controllers\\ReviewController.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T04:31:31.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Services\\Implementations\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\UserService.cs",
-              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Services\\Implementations\\UserService.cs",
-              "RelativeToolTip": "Services\\Implementations\\UserService.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAIwDwAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T04:28:40.204Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -73,6 +63,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Models\\Review.cs",
+              "RelativeDocumentMoniker": "Models\\Review.cs",
+              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Models\\Review.cs",
+              "RelativeToolTip": "Models\\Review.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T14:54:40.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReviewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Data\\Repositories\\Implementations\\ReviewRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Implementations\\ReviewRepository.cs",
+              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Data\\Repositories\\Implementations\\ReviewRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Implementations\\ReviewRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T14:52:46.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReviewDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\DTO\\ReviewDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\ReviewDTO.cs",
+              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\DTO\\ReviewDTO.cs",
+              "RelativeToolTip": "DTO\\ReviewDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T14:52:03.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReviewController.cs",
+              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Controllers\\ReviewController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReviewController.cs",
+              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Controllers\\ReviewController.cs",
+              "RelativeToolTip": "Controllers\\ReviewController.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAA9wDQAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T04:31:31.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReviewService.cs",
+              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Services\\Implementations\\ReviewService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\ReviewService.cs",
+              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Services\\Implementations\\ReviewService.cs",
+              "RelativeToolTip": "Services\\Implementations\\ReviewService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T14:50:32.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Services\\Implementations\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\UserService.cs",
+              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Services\\Implementations\\UserService.cs",
+              "RelativeToolTip": "Services\\Implementations\\UserService.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAwwDQAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T04:28:40.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -80,8 +148,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T04:05:07.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-17T04:05:07.247Z"
             }
           ]
         },

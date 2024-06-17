@@ -48,10 +48,10 @@ namespace Rodriguez_Camani_Feresin_Backend.Controllers
         }
 
         [HttpPost("add-review")]
-        public IActionResult CreateReview(int idTurno, [FromBody] ReviewDTO reviewdto)
+        public IActionResult CreateReview([FromQuery] int idTurno, [FromBody] ReviewDTO reviewdto)
         {
             _reviewService.CreateReview(idTurno, reviewdto);
-            return Ok();
+            return Created();
         }
 
 

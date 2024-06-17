@@ -2,7 +2,6 @@
 {
     public class ReviewDTO
     {
-        public int Id { get; set; }
         public int AppointmentId { get; set; }
         public string ClientUsername { get; set; }
         public decimal ClientRating { get; set; }

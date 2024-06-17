@@ -46,7 +46,6 @@ namespace Rodriguez_Camani_Feresin_Backend.Data.Repositories.Implementations
                 .Where(x => x.UserId == userId)
                 .Select(review => new ReviewDTO
                 {
-                    Id = review.ReviewId,
                     AppointmentId = review.AppointmentId,
                     ClientUsername = review.UserName,
                     ClientRating = review.Rating,

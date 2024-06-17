@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rodriguez-Camani-Feresin-Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c48d3caeca27e0bada53af9a244b09d60467e250")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c98ec132b5473e23023a774db22d52857e909366")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rodriguez-Camani-Feresin-Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rodriguez-Camani-Feresin-Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
