@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Rodriguez_Camani_Feresin_Backend.DTO;
 using Rodriguez_Camani_Feresin_Backend.Models;
@@ -6,7 +7,7 @@ using Rodriguez_Camani_Feresin_Backend.Services.Interfaces;
 
 namespace Rodriguez_Camani_Feresin_Backend.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("/[controller]")]
     [ApiController]
     public class ReviewController : ControllerBase
     {
@@ -19,18 +20,40 @@ namespace Rodriguez_Camani_Feresin_Backend.Controllers
         }
 
         // ADMIN? BARBER?
-        [HttpGet("GetReviews")]
+        [HttpGet("get-reviews")]
         public IActionResult GetReviews()
         {
             return Ok(_reviewService.GetReviews());
         }
 
+        [HttpGet("get-reviews-by-userId/{userId}")]
+        public IActionResult GetReviewsByUserId([FromRoute] int userId)
+        {
+            var reviews = _reviewService.GetReviewsByUserId(userId);
+
+            if (!reviews.Any())
+            {
+                return BadRequest("El cliente no tiene ninguna reseña creada.");
+            }
+
+            return Ok(reviews);
+        }
+
         //ADMIN??
-        [HttpGet("DeleteReview/{reviewid}")]
+        [HttpGet("delete-review/{reviewid}")]
         public IActionResult DeleteReview(int reviewid)
         {
             _reviewService.DeleteReview(reviewid);
             return Ok("Review Deleted");
         }
+
+        [HttpPost("add-review")]
+        public IActionResult CreateReview(int idTurno, [FromBody] ReviewDTO reviewdto)
+        {
+            _reviewService.CreateReview(idTurno, reviewdto);
+            return Ok();
+        }
+
+
     }
 }

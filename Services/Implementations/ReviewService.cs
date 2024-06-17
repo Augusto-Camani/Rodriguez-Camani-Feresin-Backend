@@ -3,26 +3,24 @@ using Rodriguez_Camani_Feresin_Backend.Services.Interfaces;
 using Rodriguez_Camani_Feresin_Backend.Data.Repositories;
 using Rodriguez_Camani_Feresin_Backend.Data.Repositories.Interfaces;
 using Rodriguez_Camani_Feresin_Backend.Models;
+using AutoMapper;
+
 namespace Rodriguez_Camani_Feresin_Backend.Services.Implementations
 {
     public class ReviewService : IReviewService
     {
         private readonly IReviewRepository _reviewRepository;
-        //private readonly IMapper _mapper;
-        public ReviewService(IReviewRepository reviewRepository)
+        private readonly IMapper _mapper;
+        public ReviewService(IReviewRepository reviewRepository, IMapper mapper)
         {
             _reviewRepository = reviewRepository;
+            _mapper = mapper;
         }
         public void CreateReview(int idTurno, ReviewDTO reviewdto)
         {
-            throw new NotImplementedException();
-            //if (reviewdto.UsernameInReview != null)
-            //{
-            //    var review = _mapper.Map<Review>(reviewdto);
-
-            //    _reviewRepository.CreateReview(review);
-            //}
-
+            var review = _mapper.Map<Review>(reviewdto);
+            review.AppointmentId = idTurno; 
+            _reviewRepository.CreateReview(review);
         }
 
         public void UpdateReview(int id, ReviewDTO reviewdto)
@@ -48,15 +46,17 @@ namespace Rodriguez_Camani_Feresin_Backend.Services.Implementations
 
         public IEnumerable<Review> GetReviews()
         {
-            throw new NotImplementedException();
-            //return _reviewRepository.GetReviews();
+            return _reviewRepository.GetReviews();
         }
 
-        public void DeleteReview(int reviewid)
+        public void DeleteReview(int reviewId)
         {
-            throw new NotImplementedException();
-            //_reviewRepository.DeleteReview(reviewId);
+            _reviewRepository.DeleteReview(reviewId);
         }
 
+        public List<ReviewDTO> GetReviewsByUserId(int userId)
+        {
+            return _reviewRepository.GetReviewsByUserId(userId).ToList();
+        }
     }
 }

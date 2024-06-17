@@ -8,6 +8,8 @@ namespace Rodriguez_Camani_Feresin_Backend.Data.Repositories.Interfaces
         public IEnumerable<Review> GetReviews();
         void CreateReview(Review review);
         void UpdateReview(Review review);
-        void DeleteReview(int id);
+        void DeleteReview(int reviewId);
+        public IEnumerable<ReviewDTO> GetReviewsByUserId(int userId);
+
     }
 }

@@ -3,6 +3,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Rodriguez_Camani_Feresin_Backend;
+using Rodriguez_Camani_Feresin_Backend.Data.Repositories.Implementations;
+using Rodriguez_Camani_Feresin_Backend.Data.Repositories.Interfaces;
+using Rodriguez_Camani_Feresin_Backend.Services.Implementations;
+using Rodriguez_Camani_Feresin_Backend.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,6 +58,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 #region Repositories
 builder.Services.AddScoped<IRepository, Repository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
 #endregion
 
 #region Services
@@ -61,6 +66,7 @@ builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 builder.Services.AddScoped<IValidationService, ValidationService>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
 #endregion
 
 var app = builder.Build();

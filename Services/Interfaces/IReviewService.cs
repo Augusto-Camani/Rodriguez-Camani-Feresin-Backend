@@ -7,8 +7,9 @@ namespace Rodriguez_Camani_Feresin_Backend.Services.Interfaces
     {
         public IEnumerable<Review> GetReviews();
         void DeleteReview(int reviewid);
-        // VER SI RECIBE ID TURNO
         void UpdateReview(int idTurno, ReviewDTO reviewdto);
         void CreateReview(int idTurno, ReviewDTO reviewdto);
+        public List<ReviewDTO> GetReviewsByUserId(int userId);
+
     }
 }

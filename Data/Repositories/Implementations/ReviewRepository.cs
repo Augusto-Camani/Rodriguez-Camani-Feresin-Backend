@@ -1,4 +1,5 @@
-﻿using Rodriguez_Camani_Feresin_Backend.Data.Repositories.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using Rodriguez_Camani_Feresin_Backend.Data.Repositories.Interfaces;
 using Rodriguez_Camani_Feresin_Backend.DTO;
 using Rodriguez_Camani_Feresin_Backend.Models;
 
@@ -12,9 +13,8 @@ namespace Rodriguez_Camani_Feresin_Backend.Data.Repositories.Implementations
 
         public void CreateReview(Review review)
         {
-            throw new NotImplementedException();
-            //_context.Add(review);
-            //_context.SaveChanges();
+            _context.Add(review);
+            _context.SaveChanges();
         }
 
         public IEnumerable<Review> GetReviews()
@@ -23,15 +23,14 @@ namespace Rodriguez_Camani_Feresin_Backend.Data.Repositories.Implementations
             //return _context.Review;
         }
 
-        public void DeleteReview(int id)
+        public void DeleteReview(int reviewId)
         {
-            throw new NotImplementedException();
-            //var reviewToDelete = _context.Reviews.Find(reviewId);
-            //if (reviewToDelete != null)
-            //{
-            //    _context.Reviews.Remove(reviewToDelete);
-            //    _context.SaveChanges();
-            //}
+            var reviewToDelete = _context.Reviews.Find(reviewId);
+            if (reviewToDelete != null)
+            {
+                _context.Reviews.Remove(reviewToDelete);
+                _context.SaveChanges();
+            }
         }
 
         public void UpdateReview(Review review)
@@ -40,5 +39,24 @@ namespace Rodriguez_Camani_Feresin_Backend.Data.Repositories.Implementations
             //_context.Update(review);
             //_context.SaveChanges();
         }
+
+        public IEnumerable<ReviewDTO> GetReviewsByUserId(int userId)
+        {
+            var reviewsDtoList = _context.Reviews
+                .Where(x => x.UserId == userId)
+                .Select(review => new ReviewDTO
+                {
+                    Id = review.ReviewId,
+                    AppointmentId = review.AppointmentId,
+                    ClientUsername = review.UserName,
+                    ClientRating = review.Rating,
+                    ClientComment = review.Description,
+                    CreationDate = review.CreationDate
+                })
+                .ToList();
+
+            return reviewsDtoList;
+        }
+
     }
 }

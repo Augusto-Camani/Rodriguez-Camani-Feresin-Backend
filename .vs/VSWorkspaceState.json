@@ -1,11 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Abstractions",
     "\\bin",
     "\\bin\\Release",
-    "\\obj",
-    "\\obj\\Debug",
-    "\\obj\\Release",
     "\\Profiles",
     "\\Properties",
     "\\Services",
