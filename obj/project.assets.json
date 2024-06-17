@@ -3104,24 +3104,27 @@
     ]
   },
   "packageFolders": {
-    "/home/enano/.nuget/packages/": {}
+    "C:\\Users\\augus\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/9619eed0-01e1-4cdd-a083-476096f18977/Proyecto BACK/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj",
+      "projectUniqueName": "C:\\Users\\augus\\OneDrive\\Documentos\\Proyectos\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj",
       "projectName": "Rodriguez-Camani-Feresin-Backend",
-      "projectPath": "/mnt/9619eed0-01e1-4cdd-a083-476096f18977/Proyecto BACK/Rodriguez-Camani-Feresin-Backend/Rodriguez-Camani-Feresin-Backend.csproj",
-      "packagesPath": "/home/enano/.nuget/packages/",
-      "outputPath": "/mnt/9619eed0-01e1-4cdd-a083-476096f18977/Proyecto BACK/Rodriguez-Camani-Feresin-Backend/obj/",
+      "projectPath": "C:\\Users\\augus\\OneDrive\\Documentos\\Proyectos\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj",
+      "packagesPath": "C:\\Users\\augus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\augus\\OneDrive\\Documentos\\Proyectos\\Rodriguez-Camani-Feresin-Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/enano/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\augus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3201,7 +3204,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -2,14 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\Abstractions",
-    "\\bin",
     "\\bin\\Release",
-    "\\Controllers",
+    "\\Models",
     "\\Profiles",
     "\\Properties",
     "\\Services",
     "\\Services\\Implementations"
   ],
-  "SelectedNode": "\\Rodriguez-Camani-Feresin-Backend.sln",
+  "SelectedNode": "\\Abstractions\\PasswordHasher.cs",
   "PreviewInSolutionExplorer": false
 }
