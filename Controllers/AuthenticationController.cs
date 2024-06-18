@@ -22,7 +22,7 @@ public class AuthenticationController : ControllerBase
         _config = config;
     }
 
-    [HttpPost]
+    [HttpPost("/authentication")]
     public IActionResult Authenticate([FromBody] AuthenticationRequestBody authenticationRequestBody)
     {
         BaseResponse validateUserResult = _authenticationService.ValidateUser(authenticationRequestBody);
@@ -37,20 +37,20 @@ public class AuthenticationController : ControllerBase
 
         if (validateUserResult.Result)
         {
-            User user = _userService.GetUserByName(authenticationRequestBody.UserName);
-            var securityPassword = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_config["Authentication:SecretForKey"]));
+            var user = _userService.GetUserByName(authenticationRequestBody.UserName);
+            var securityPassword = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_config["Jwt:Key"]));
             var signature = new SigningCredentials(securityPassword, SecurityAlgorithms.HmacSha256);
 
             var claimsForToken = new List<Claim>
-            {
+            {   
                 new Claim("sub", user.UserId.ToString()),
                 new Claim("username", user.UserName),
                 new Claim("usertype", user.UserType.ToString())
             };
 
             var jwtSecurityToken = new JwtSecurityToken(
-                _config["Authentication:Issuer"],
-                _config["Authentication:Audience"],
+                _config["Jwt:Issuer"],
+                _config["Jwt:Audience"],
                 claimsForToken,
                 DateTime.UtcNow,
                 DateTime.UtcNow.AddHours(1),
