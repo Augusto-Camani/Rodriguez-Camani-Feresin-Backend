@@ -2,6 +2,7 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Rodriguez_Camani_Feresin_Backend;
 using Rodriguez_Camani_Feresin_Backend.Data.Repositories.Implementations;
 using Rodriguez_Camani_Feresin_Backend.Data.Repositories.Interfaces;
@@ -22,8 +23,36 @@ builder.Services.AddCors(options =>
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(
-);
+
+builder.Services.AddAuthorization(options => //Agregamos políticas para la autorización de los respectivos ENDPOINTS.
+{
+    options.AddPolicy("AdminPolicy", policy => policy.RequireClaim("usertype", "Admin"));
+    options.AddPolicy("ClientPolicy", policy => policy.RequireClaim("usertype", "Client"));
+    options.AddPolicy("BarberPolicy", policy => policy.RequireClaim("usertype", "Barber"));
+    options.AddPolicy("BothPolicy", policy => policy.RequireClaim("usertype", "Admin", "Client" ,"Barber"));
+});
+
+builder.Services.AddSwaggerGen(setupAction =>
+{
+    setupAction.AddSecurityDefinition("RodriguezCamaniFeresinApiBearerAuth", new OpenApiSecurityScheme() //Esto va a permitir usar swagger con el token.
+    {
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        Description = "Acá pegar el token generado al loguearse."
+    });
+
+    setupAction.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "RodriguezCamaniFeresinApiBearerAuth" } //Tiene que coincidir con el id seteado arriba en la definición
+                }, new List<string>() }
+    });
+});
 
 var configuration = builder.Configuration;
 
@@ -48,6 +77,8 @@ builder.Services.AddAuthentication(options =>
         };
     }
 );
+
+
 
 // builder.Services.AddDbContext<DbContextCFR>(options =>
 //     options.UseMySql(configuration.GetConnectionString("MySQLConnection"),
