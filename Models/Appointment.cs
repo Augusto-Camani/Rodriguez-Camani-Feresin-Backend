@@ -10,8 +10,9 @@ public class Appointment
     public int AppointmentId { get; set; }
     [Required]
     public DateTime DateTime { get; set; }
-    public int ReceiptNumber { get; set; }
-    public string Description { get; set; }
+    public TimeSpan StartTime { get; set; }
+    public Service Service { get; set; }
+    public Status Status { get; set; }
 
     [ForeignKey("ClientId")]
     public Client Client { get; set; }
@@ -22,7 +23,8 @@ public class Appointment
     public Barber Barber { get; set; }
     public int BarberId { get; set; }
 
-    [ForeignKey("ReviewId")]
-    public Review Review { get; set; }
-    public int ReviewId { get; set; }
+    [ForeignKey("BarberAvailabilityId")]
+    public BarberAvailability BarberAvailability { get; set; }
+    public int BarberAvailabilityId { get; set; }
+    public Review Review { get; set;}
 }
