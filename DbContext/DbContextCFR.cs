@@ -14,6 +14,8 @@ public class DbContextCFR : DbContext
     public DbSet<Barber> Barbers { get; set; }
     public DbSet<Client> Clients { get; set; }
     public DbSet<Appointment> Appointments { get; set; }
+    public DbSet<BarberAvailability> BarberAvailabilities {get; set;}
+    public DbSet<BarberSchedule> BarberSchedules {get;set;}
     public DbSet<Review> Reviews { get; set; }
     public DbSet<Reply> Replies { get; set; }
 
@@ -50,6 +52,23 @@ public class DbContextCFR : DbContext
             entity.HasOne(ap => ap.Review)
                 .WithOne(re => re.Appointment)
                 .HasForeignKey<Review>(re => re.ReviewId);
+        });
+
+        modelBuilder.Entity<BarberAvailability>(entity => 
+        {
+            entity.ToTable("BarberAvailabilities");
+            entity.HasKey(e => e.BarberAvailabilityId);
+            entity.HasOne(ba => ba.BarberSchedule)
+                .WithMany(bs => bs.AvailabilitySlots)
+                .HasForeignKey(ba => ba.BarberScheduleId);
+        });
+
+        modelBuilder.Entity<BarberSchedule>(entity => 
+        {
+            entity.ToTable("BarberShecules");
+            entity.HasKey(e => e.BarberScheduleId);
+            entity.HasMany(bs => bs.AvailabilitySlots)
+                .WithOne(ba => ba.BarberSchedule);
         });
 
         modelBuilder.Entity<Review>(entity =>

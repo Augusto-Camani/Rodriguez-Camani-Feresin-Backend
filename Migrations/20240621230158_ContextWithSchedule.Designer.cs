@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Rodriguez_Camani_Feresin_Backend;
 
@@ -10,9 +11,11 @@ using Rodriguez_Camani_Feresin_Backend;
 namespace Rodriguez_Camani_Feresin_Backend.Migrations
 {
     [DbContext(typeof(DbContextCFR))]
-    partial class DbContextCFRModelSnapshot : ModelSnapshot
+    [Migration("20240621230158_ContextWithSchedule")]
+    partial class ContextWithSchedule
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.6");
