@@ -14,8 +14,8 @@ public class DbContextCFR : DbContext
     public DbSet<Barber> Barbers { get; set; }
     public DbSet<Client> Clients { get; set; }
     public DbSet<Appointment> Appointments { get; set; }
-    public DbSet<BarberAvailability> BarberAvailabilities {get; set;}
-    public DbSet<BarberSchedule> BarberSchedules {get;set;}
+    public DbSet<BarberAvailability> BarberAvailabilities { get; set; }
+    public DbSet<BarberSchedule> BarberSchedules { get ;set; }
     public DbSet<Review> Reviews { get; set; }
     public DbSet<Reply> Replies { get; set; }
 
