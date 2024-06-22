@@ -65,10 +65,11 @@ public class DbContextCFR : DbContext
 
         modelBuilder.Entity<BarberSchedule>(entity => 
         {
-            entity.ToTable("BarberShecules");
+            entity.ToTable("BarberShcedules");
             entity.HasKey(e => e.BarberScheduleId);
             entity.HasMany(bs => bs.AvailabilitySlots)
-                .WithOne(ba => ba.BarberSchedule);
+                .WithOne(ba => ba.BarberSchedule)
+                .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<Review>(entity =>
