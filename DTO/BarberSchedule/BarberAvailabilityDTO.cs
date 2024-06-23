@@ -1,4 +1,6 @@
-﻿namespace Rodriguez_Camani_Feresin_Backend;
+﻿using Swashbuckle.AspNetCore.Annotations;
+
+namespace Rodriguez_Camani_Feresin_Backend;
 
 public class BarberAvailabilityDTO
 {
