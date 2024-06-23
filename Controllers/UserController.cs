@@ -16,7 +16,7 @@ public class UserController : ControllerBase
     
     
     [HttpGet("get-user")]
-    [Authorize(Policy = "AdminPolicy")]
+    [Authorize(Policy = "BothPolicy")]
     public IActionResult GetUserById([FromQuery] int id){
         return Ok(_userService.GetUserById(id));
     }
