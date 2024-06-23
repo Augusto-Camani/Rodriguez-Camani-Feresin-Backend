@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
+using Swashbuckle.AspNetCore.Filters;
 
 namespace Rodriguez_Camani_Feresin_Backend
 {
@@ -18,7 +19,8 @@ namespace Rodriguez_Camani_Feresin_Backend
         }
 
         [HttpPost("{barberId}/schedules")]
-        [Authorize(Policy = "Barber")]
+        [Authorize(Policy = "BarberPolicy")]
+        [SwaggerRequestExample(typeof(BarberScheduleDTO), typeof(BarberScheduleDTOExample))]
         public IActionResult CreateSchedule(int barberId, [FromBody] BarberScheduleDTO barberScheduleDTO)
         {
             try
@@ -33,7 +35,7 @@ namespace Rodriguez_Camani_Feresin_Backend
         }
 
         [HttpGet("{barberId}/schedules")]
-        [Authorize(Policy = "Barber")]
+        [Authorize(Policy = "BarberPolicy")]
         public IActionResult GetSchedule(int barberId)
         {
             try
@@ -64,7 +66,7 @@ namespace Rodriguez_Camani_Feresin_Backend
         }
 
         [HttpGet("schedules")]
-        [Authorize(Policy = "Barber")]
+        [Authorize(Policy = "BarberPolicy")]
         public IActionResult GetAllSchedules()
         {
             var schedules = _barberScheduleService.GetAllBarberSchedules().Select(schedule => new BarberScheduleDTO
@@ -83,7 +85,7 @@ namespace Rodriguez_Camani_Feresin_Backend
         }
 
         [HttpDelete("{barberId}/schedules")]
-        [Authorize(Policy = "Barber")]
+        [Authorize(Policy = "BarberPolicy")]
         public IActionResult DeleteSchedule(int barberId)
         {
             try

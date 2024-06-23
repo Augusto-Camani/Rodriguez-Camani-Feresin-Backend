@@ -8,6 +8,7 @@ using Rodriguez_Camani_Feresin_Backend.Data.Repositories.Implementations;
 using Rodriguez_Camani_Feresin_Backend.Data.Repositories.Interfaces;
 using Rodriguez_Camani_Feresin_Backend.Services.Implementations;
 using Rodriguez_Camani_Feresin_Backend.Services.Interfaces;
+using Swashbuckle.AspNetCore.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -52,10 +53,12 @@ builder.Services.AddSwaggerGen(setupAction =>
                     Id = "RodriguezCamaniFeresinApiBearerAuth" } //Tiene que coincidir con el id seteado arriba en la definición
                 }, new List<string>() }
     });
+    setupAction.ExampleFilters();
 });
 
-var configuration = builder.Configuration;
+builder.Services.AddSwaggerExamplesFromAssemblyOf<BarberScheduleDTOExample>();
 
+var configuration = builder.Configuration;
 
 builder.Services.AddAuthentication(options =>
 {
