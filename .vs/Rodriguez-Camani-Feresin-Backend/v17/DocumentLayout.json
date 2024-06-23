@@ -1,7 +1,16 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\augus\\OneDrive\\Documentos\\Proyectos\\Rodriguez-Camani-Feresin-Backend\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +18,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAcwAcAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T04:35:25.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T04:34:49.673Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
