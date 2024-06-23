@@ -66,7 +66,7 @@ namespace Rodriguez_Camani_Feresin_Backend
         }
 
         [HttpGet("schedules")]
-        [Authorize(Policy = "BarberPolicy")]
+        [Authorize(Policy = "BothPolicy")]
         public IActionResult GetAllSchedules()
         {
             var schedules = _barberScheduleService.GetAllBarberSchedules().Select(schedule => new BarberScheduleDTO
@@ -82,6 +82,25 @@ namespace Rodriguez_Camani_Feresin_Backend
                 }).ToList()
             });
             return Ok(schedules);
+        }
+        
+        [HttpGet("{barberName}")]
+        [Authorize(Policy = "ClientPolicy")]
+        public IActionResult GetScheduleByBarberName(string barberName)
+        {
+            try
+            {
+                var barberSchedule = _barberScheduleService.GetBarberScheduleByBarberName(barberName);
+                if (barberSchedule == null)
+                {
+                    return NotFound("Schedule not found for the specified barber.");
+                }
+                return Ok(barberSchedule);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
         [HttpDelete("{barberId}/schedules")]

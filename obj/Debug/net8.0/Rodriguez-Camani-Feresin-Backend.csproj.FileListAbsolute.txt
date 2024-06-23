@@ -729,3 +729,7 @@ C:\Users\Fer\Desktop\Projects\En Proceso\TPI-BACK\Rodriguez-Camani-Feresin-Backe
 C:\Users\Fer\Desktop\Projects\En Proceso\TPI-BACK\Rodriguez-Camani-Feresin-Backend\obj\Debug\net8.0\Rodriguez-Camani-Feresin-Backend.pdb
 C:\Users\Fer\Desktop\Projects\En Proceso\TPI-BACK\Rodriguez-Camani-Feresin-Backend\obj\Debug\net8.0\Rodriguez-Camani-Feresin-Backend.genruntimeconfig.cache
 C:\Users\Fer\Desktop\Projects\En Proceso\TPI-BACK\Rodriguez-Camani-Feresin-Backend\obj\Debug\net8.0\ref\Rodriguez-Camani-Feresin-Backend.dll
+C:\Users\augus\OneDrive\Documentos\Proyectos\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Scrutor.dll
+C:\Users\augus\OneDrive\Documentos\Proyectos\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\augus\OneDrive\Documentos\Proyectos\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\augus\OneDrive\Documentos\Proyectos\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
