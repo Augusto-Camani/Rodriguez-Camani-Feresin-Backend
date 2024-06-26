@@ -20,7 +20,7 @@ public class BarberShceduleService : IBarberScheduleService
 
         var availabilitySlots = new List<BarberAvailability>();
 
-        var defaultDays = Enum.GetValues(typeof(DaysOfTheWeek)).Cast<DaysOfTheWeek>().Where(day => day != DaysOfTheWeek.Sunday);
+        var defaultDays = Enum.GetValues(typeof(DaysOfTheWeek)).Cast<DaysOfTheWeek>().Where(day => day != DaysOfTheWeek.Monday);
 
         foreach (var day in defaultDays)
         {
