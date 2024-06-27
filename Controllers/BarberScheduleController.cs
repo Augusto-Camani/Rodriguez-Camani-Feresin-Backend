@@ -35,7 +35,7 @@ namespace Rodriguez_Camani_Feresin_Backend
         }
 
         [HttpGet("{barberId}/schedules")]
-        [Authorize(Policy = "BarberPolicy")]
+        [Authorize(Policy = "BothPolicy")]
         public IActionResult GetSchedule(int barberId)
         {
             try

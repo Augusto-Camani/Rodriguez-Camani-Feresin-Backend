@@ -108,6 +108,7 @@ builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<IBarberScheduleService, BarberShceduleService>();
+builder.Services.AddScoped<IBarberScheduleFactory, BarberScheduleFactory>();
 #endregion
 
 var app = builder.Build();

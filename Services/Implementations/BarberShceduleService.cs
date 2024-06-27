@@ -3,61 +3,37 @@ namespace Rodriguez_Camani_Feresin_Backend;
 
 public class BarberShceduleService : IBarberScheduleService
 {   
+    private readonly IBarberScheduleFactory _barberShceduleFactory;
     private readonly IBarberScheduleRepository _barberScheduleRepository;
     private readonly IUserRepository _userRepository;
-    public BarberShceduleService( IBarberScheduleRepository barberScheduleRepository, IUserRepository userRepository)
+    public BarberShceduleService( IBarberScheduleFactory barberScheduleFactory ,IBarberScheduleRepository barberScheduleRepository, IUserRepository userRepository)
     {
+        _barberShceduleFactory = barberScheduleFactory;
         _barberScheduleRepository = barberScheduleRepository;
         _userRepository = userRepository;
     }
     public void CreateSchedule(int barberId, BarberScheduleDTO barberScheduleDTO)
     {
-        var barber = _userRepository.GetUserById(barberId);
-        if (barber == null)
-        {
-            throw new Exception("Barber not found.");
-        }
-
-        var availabilitySlots = new List<BarberAvailability>();
-
-        var defaultDays = Enum.GetValues(typeof(DaysOfTheWeek)).Cast<DaysOfTheWeek>().Where(day => day != DaysOfTheWeek.Monday);
-
-        foreach (var day in defaultDays)
-        {
-            var availabilityDTO = barberScheduleDTO.AvailabilitySlots.FirstOrDefault(ba => ba.DayOfTheWeek == day);
-
-            if (availabilityDTO == null)
+         var barber = _userRepository.GetUserById(barberId);
+            if (barber == null)
             {
-                availabilitySlots.Add(new BarberAvailability
-                {
-                    DayOfTheWeek = day,
-                    StartTime = new TimeSpan(9, 0, 0),
-                    EndTime = new TimeSpan(17, 0, 0), 
-                    IsAvailable = true 
-                });
+                throw new Exception("Barber not found.");
             }
-            else
+
+            var barberSchedule = _barberShceduleFactory.CreateBarberSchedule(barberId);
+
+            foreach (var slot in barberScheduleDTO.AvailabilitySlots)
             {
-
-                availabilitySlots.Add(new BarberAvailability
+                var existingSlot = barberSchedule.AvailabilitySlots.FirstOrDefault(s => s.DayOfTheWeek == slot.DayOfTheWeek);
+                if (existingSlot != null)
                 {
-                    DayOfTheWeek = availabilityDTO.DayOfTheWeek,
-                    StartTime = availabilityDTO.StartTime,
-                    EndTime = availabilityDTO.EndTime,
-                    IsAvailable = availabilityDTO.IsAvailable
-                });
+                    existingSlot.StartTime = slot.StartTime;
+                    existingSlot.EndTime = slot.EndTime;
+                    existingSlot.IsAvailable = slot.IsAvailable;
+                }
             }
-        }
 
-        var barberSchedule = new BarberSchedule
-        {
-            BarberId = barberId,
-            CurrentYear = barberScheduleDTO.CurrentYear,
-            LastModifiedDate = DateTime.UtcNow,
-            AvailabilitySlots = availabilitySlots
-        };
-
-        _barberScheduleRepository.CreateSchedule(barberSchedule, barberSchedule.AvailabilitySlots);
+            _barberScheduleRepository.CreateSchedule(barberSchedule, barberSchedule.AvailabilitySlots);
     }
     public BarberSchedule GetBarberScheduleByBarberName(string barberName)
     {
