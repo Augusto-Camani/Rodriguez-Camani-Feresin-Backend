@@ -22,6 +22,11 @@ namespace Rodriguez_Camani_Feresin_Backend.Data.Repositories.Implementations
             return _context.Reviews;
         }
 
+        public Review GetReviewById(int reviewId)
+        {
+            return _context.Reviews.FirstOrDefault(r => r.ReviewId == reviewId);
+        }
+
         public void DeleteReview(int reviewId)
         {
             var reviewToDelete = _context.Reviews.Find(reviewId);
@@ -34,24 +39,14 @@ namespace Rodriguez_Camani_Feresin_Backend.Data.Repositories.Implementations
 
         public void UpdateReview(Review review)
         {
-            throw new NotImplementedException();
-            //_context.Update(review);
-            //_context.SaveChanges();
+            _context.Update(review);
+            _context.SaveChanges();
         }
 
-        public IEnumerable<ReviewDTO> GetReviewsByUserId(int userId)
+        public IEnumerable<Review> GetReviewsByUserId(int userId)
         {
             var reviewsDtoList = _context.Reviews
-                .Where(x => x.UserId == userId)
-                .Select(review => new ReviewDTO
-                {
-                    AppointmentId = review.AppointmentId,
-                    ClientUsername = review.UserName,
-                    ClientRating = review.Rating,
-                    ClientComment = review.Description,
-                    CreationDate = review.CreationDate
-                })
-                .ToList();
+                .Where(x => x.UserId == userId);
 
             return reviewsDtoList;
         }

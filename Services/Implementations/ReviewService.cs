@@ -4,6 +4,7 @@ using Rodriguez_Camani_Feresin_Backend.Data.Repositories;
 using Rodriguez_Camani_Feresin_Backend.Data.Repositories.Interfaces;
 using Rodriguez_Camani_Feresin_Backend.Models;
 using AutoMapper;
+using Rodriguez_Camani_Feresin_Backend.Controllers;
 
 namespace Rodriguez_Camani_Feresin_Backend.Services.Implementations
 {
@@ -16,32 +17,21 @@ namespace Rodriguez_Camani_Feresin_Backend.Services.Implementations
             _reviewRepository = reviewRepository;
             _mapper = mapper;
         }
-        public void CreateReview(int idTurno, ReviewDTO reviewdto)
+        public void CreateReview(int idTurno, ReviewDTO reviewDTO)
         {
-            var review = _mapper.Map<Review>(reviewdto);
+            var review = _mapper.Map<Review>(reviewDTO);
             review.AppointmentId = idTurno; 
             _reviewRepository.CreateReview(review);
         }
 
-        public void UpdateReview(int id, ReviewDTO reviewdto)
+        public void DeleteReview(int reviewId)
         {
-            throw new NotImplementedException();
+          _reviewRepository.DeleteReview(reviewId);
+        }
 
-            // VER COMO HACER, SI OBTIENE LA REVIEW POR ID O POR USERNAME O POR QUÉ MEDIO
-            //    var existsReview = _reviewRepository.GetReviewById(reviewid);
-            //    if (existsReview == null)
-            //    {
-            //        throw new Exception("Review NO encontrada");
-            //    }
-            //    // Mapea las propiedades de manera individual, del DTO a la entidad existente.
-            //    existsReview.GameId = reviewdto.GameId;
-            //    existsReview.UserNameInReview = reviewdto.UsernameInReview;
-            //    existsReview.UserCommentInReview = reviewdto.UserCommentInReview;
-            //    existsReview.UserRatingInReview = reviewdto.UserRatingInReview;
-            //    existsReview.CreationDate = reviewdto.CreationDate;
-            //    // Actualiza la entidad en el repositorio
-            //    _reviewRepository.UpdateReview(existsReview);
-            //}
+        public Review GetReviewById(int reviewId)
+        {
+            return _reviewRepository.GetReviewById(reviewId);
         }
 
         public IEnumerable<Review> GetReviews()
@@ -49,14 +39,23 @@ namespace Rodriguez_Camani_Feresin_Backend.Services.Implementations
             return _reviewRepository.GetReviews();
         }
 
-        public void DeleteReview(int reviewId)
+        public IEnumerable<Review> GetReviewsByUserId(int userId)
         {
-            _reviewRepository.DeleteReview(reviewId);
+           return _reviewRepository.GetReviewsByUserId(userId);
         }
 
-        public List<ReviewDTO> GetReviewsByUserId(int userId)
+        public void UpdateReview(int reviweId, ReviewDTO reviewDTO)
         {
-            return _reviewRepository.GetReviewsByUserId(userId).ToList();
+
+               var existingReview = _reviewRepository.GetReviewById(reviweId);
+               if (existingReview == null)
+               {
+                   throw new Exception("Review NO encontrada");
+               }
+
+               existingReview.Description = reviewDTO.ClientComment;
+               existingReview.Rating = reviewDTO.ClientRating;
+               _reviewRepository.UpdateReview(existingReview);
+            }
         }
-    }
 }

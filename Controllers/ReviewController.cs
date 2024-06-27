@@ -19,14 +19,15 @@ namespace Rodriguez_Camani_Feresin_Backend.Controllers
 
         }
 
-        // ADMIN? BARBER?
         [HttpGet("get-reviews")]
+        [Authorize(Policy = "BothPolicy")]
         public IActionResult GetReviews()
         {
             return Ok(_reviewService.GetReviews());
         }
 
         [HttpGet("get-reviews-by-userId/{userId}")]
+        [Authorize(Policy = "BothPolicy")]
         public IActionResult GetReviewsByUserId([FromRoute] int userId)
         {
             var reviews = _reviewService.GetReviewsByUserId(userId);
@@ -39,21 +40,27 @@ namespace Rodriguez_Camani_Feresin_Backend.Controllers
             return Ok(reviews);
         }
 
-        //ADMIN??
-        [HttpGet("delete-review/{reviewid}")]
-        public IActionResult DeleteReview(int reviewid)
+        [HttpGet("get-review-by-id/{reviewId}")]
+        [Authorize(Policy = "BothPolicy")]
+        public IActionResult GetReviewById([FromRoute] int reviewId)
         {
-            _reviewService.DeleteReview(reviewid);
+            return Ok(_reviewService.GetReviewById(reviewId));
+        }
+
+        [HttpGet("delete-review/{reviewId}")]
+        [Authorize(Policy = "AdminPolicy")]
+        public IActionResult DeleteReview(int reviewId)
+        {
+            _reviewService.DeleteReview(reviewId);
             return Ok("Review Deleted");
         }
 
         [HttpPost("add-review")]
-        public IActionResult CreateReview([FromQuery] int idTurno, [FromBody] ReviewDTO reviewdto)
+        [Authorize(Policy = "ClientPolicy")]
+        public IActionResult CreateReview([FromQuery] int idTurno, [FromBody] ReviewDTO reviewDTO)
         {
-            _reviewService.CreateReview(idTurno, reviewdto);
+            _reviewService.CreateReview(idTurno, reviewDTO);
             return Created();
         }
-
-
     }
 }
