@@ -19,8 +19,7 @@ namespace Rodriguez_Camani_Feresin_Backend.Data.Repositories.Implementations
 
         public IEnumerable<Review> GetReviews()
         {
-            throw new NotImplementedException();
-            //return _context.Review;
+            return _context.Reviews;
         }
 
         public void DeleteReview(int reviewId)
