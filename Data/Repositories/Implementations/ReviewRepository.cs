@@ -29,12 +29,9 @@ namespace Rodriguez_Camani_Feresin_Backend.Data.Repositories.Implementations
 
         public void DeleteReview(int reviewId)
         {
-            var reviewToDelete = _context.Reviews.Find(reviewId);
-            if (reviewToDelete != null)
-            {
-                _context.Reviews.Remove(reviewToDelete);
-                _context.SaveChanges();
-            }
+            _context.Reviews.Remove(GetReviewById(reviewId));
+            _context.SaveChanges();
+   
         }
 
         public void UpdateReview(Review review)
