@@ -8,7 +8,10 @@ namespace Rodriguez_Camani_Feresin_Backend.Data.Repositories.Implementations
         public AppointmentRepository(DbContextCFR context) : base(context)
         {
         }
-
+        public IEnumerable<Appointment> GetAvailableBarberAppointmentsByDate()
+        {
+            throw new NotImplementedException();
+        }
         public void CreateAppointment(Appointment appointment)
         {
             throw new NotImplementedException();

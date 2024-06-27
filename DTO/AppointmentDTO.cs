@@ -2,11 +2,10 @@
 {
     public class AppointmentDTO
     {
-        public int Id { get; set; }
-        public string ClientName { get; set; }
-        public string Barber { get; set; }
-        public string Product { get; set; }
-        public bool Prepaid { get; set; }
+        public int ClientId { get; set; }
+        public int BarberId { get; set; }
+        public string Service { get; set; }
+        public TimeSpan StartTime { get; set; }
         public DateTime CreationDate { get; set; }
     }
 }

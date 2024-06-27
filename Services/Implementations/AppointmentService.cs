@@ -12,7 +12,10 @@ namespace Rodriguez_Camani_Feresin_Backend.Services.Implementations
             _appointmentRepository = appointmentRepository;
 
         }
-
+        public IEnumerable<Appointment> GetAvailableBarberAppointmentsByDate()
+        {
+            throw new NotImplementedException();
+        }
         public void CreateAppointment(AppointmentDTO appointmentDto)
         {
             throw new NotImplementedException();

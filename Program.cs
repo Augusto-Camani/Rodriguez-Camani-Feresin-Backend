@@ -22,10 +22,9 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod());
 });
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
-builder.Services.AddAuthorization(options => //Agregamos políticas para la autorización de los respectivos ENDPOINTS.
+builder.Services.AddAuthorization(options => 
 {
     options.AddPolicy("AdminPolicy", policy => policy.RequireClaim("usertype", "Admin"));
     options.AddPolicy("ClientPolicy", policy => policy.RequireClaim("usertype", "Client"));
@@ -35,7 +34,7 @@ builder.Services.AddAuthorization(options => //Agregamos políticas para la auto
 
 builder.Services.AddSwaggerGen(setupAction =>
 {
-    setupAction.AddSecurityDefinition("RodriguezCamaniFeresinApiBearerAuth", new OpenApiSecurityScheme() //Esto va a permitir usar swagger con el token.
+    setupAction.AddSecurityDefinition("RodriguezCamaniFeresinApiBearerAuth", new OpenApiSecurityScheme()
     {
         Type = SecuritySchemeType.Http,
         Scheme = "Bearer",
@@ -50,7 +49,7 @@ builder.Services.AddSwaggerGen(setupAction =>
                 Reference = new OpenApiReference
                 {
                     Type = ReferenceType.SecurityScheme,
-                    Id = "RodriguezCamaniFeresinApiBearerAuth" } //Tiene que coincidir con el id seteado arriba en la definición
+                    Id = "RodriguezCamaniFeresinApiBearerAuth" }
                 }, new List<string>() }
     });
     setupAction.ExampleFilters();
@@ -81,8 +80,6 @@ builder.Services.AddAuthentication(options =>
     }
 );
 
-
-
 // builder.Services.AddDbContext<DbContextCFR>(options =>
 //     options.UseMySql(configuration.GetConnectionString("MySQLConnection"),
 //     ServerVersion.Parse("8.0.36-mysql")));
@@ -99,21 +96,27 @@ builder.Services.AddScoped<IRepository, Repository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
 builder.Services.AddScoped<IBarberScheduleRepository, BarberScheduleRepository>();
+builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 #endregion
 
 #region Services
-builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
-builder.Services.AddScoped<IValidationService, ValidationService>();
-builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<IBarberScheduleService, BarberShceduleService>();
+builder.Services.AddScoped<IAppointmentService, AppointmentService>();
+#endregion
+
+#region Security Services
+builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+builder.Services.AddScoped<IValidationService, ValidationService>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+#endregion
+
+#region Factories
 builder.Services.AddScoped<IBarberScheduleFactory, BarberScheduleFactory>();
 #endregion
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
 
 app.UseSwagger();
 app.UseSwaggerUI();
@@ -122,7 +125,6 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
-
 
 app.UseHttpsRedirection();
 
