@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vYXs40TPXfs=",
+  "dgSpecHash": "5IQEHezvxcQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\augus\\OneDrive\\Documentos\\Proyectos\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj",
+  "projectFilePath": "C:\\Users\\augus\\OneDrive\\Documentos\\Proyecto Final\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\augus\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\augus\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",

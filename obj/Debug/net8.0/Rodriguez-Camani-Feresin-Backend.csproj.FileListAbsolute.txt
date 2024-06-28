@@ -741,3 +741,14 @@ C:\Users\Fer\Desktop\Projects\En Proceso\TPI-BACK\Rodriguez-Camani-Feresin-Backe
 C:\Users\Fer\Desktop\Projects\En Proceso\TPI-BACK\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
 C:\Users\augus\OneDrive\Documentos\Proyectos\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Castle.Core.dll
 C:\Users\augus\OneDrive\Documentos\Proyectos\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Moq.dll
+c:\Users\augus\OneDrive\Documentos\Proyecto Final\Rodriguez-Camani-Feresin-Backend\obj\Debug\net8.0\Rodriguez-Camani-Feresin-Backend.csproj.AssemblyReference.cache
+c:\Users\augus\OneDrive\Documentos\Proyecto Final\Rodriguez-Camani-Feresin-Backend\obj\Debug\net8.0\Rodriguez-Camani-Feresin-Backend.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\augus\OneDrive\Documentos\Proyecto Final\Rodriguez-Camani-Feresin-Backend\obj\Debug\net8.0\Rodriguez-Camani-Feresin-Backend.AssemblyInfoInputs.cache
+c:\Users\augus\OneDrive\Documentos\Proyecto Final\Rodriguez-Camani-Feresin-Backend\obj\Debug\net8.0\Rodriguez-Camani-Feresin-Backend.AssemblyInfo.cs
+c:\Users\augus\OneDrive\Documentos\Proyecto Final\Rodriguez-Camani-Feresin-Backend\obj\Debug\net8.0\Rodriguez-Camani-Feresin-Backend.csproj.CoreCompileInputs.cache
+c:\Users\augus\OneDrive\Documentos\Proyecto Final\Rodriguez-Camani-Feresin-Backend\obj\Debug\net8.0\Rodriguez-Camani-Feresin-Backend.MvcApplicationPartsAssemblyInfo.cs
+c:\Users\augus\OneDrive\Documentos\Proyecto Final\Rodriguez-Camani-Feresin-Backend\obj\Debug\net8.0\Rodriguez-Camani-Feresin-Backend.MvcApplicationPartsAssemblyInfo.cache
+c:\Users\augus\OneDrive\Documentos\Proyecto Final\Rodriguez-Camani-Feresin-Backend\obj\Debug\net8.0\Rodriguez-Camani-Feresin-Backend.sourcelink.json
+c:\Users\augus\OneDrive\Documentos\Proyecto Final\Rodriguez-Camani-Feresin-Backend\obj\Debug\net8.0\Rodriguez-Camani-Feresin-Backend.dll
+c:\Users\augus\OneDrive\Documentos\Proyecto Final\Rodriguez-Camani-Feresin-Backend\obj\Debug\net8.0\refint\Rodriguez-Camani-Feresin-Backend.dll
+c:\Users\augus\OneDrive\Documentos\Proyecto Final\Rodriguez-Camani-Feresin-Backend\obj\Debug\net8.0\Rodriguez-Camani-Feresin-Backend.pdb

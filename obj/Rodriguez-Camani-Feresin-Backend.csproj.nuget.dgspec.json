@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\augus\\OneDrive\\Documentos\\Proyectos\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj": {}
+    "C:\\Users\\augus\\OneDrive\\Documentos\\Proyecto Final\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\augus\\OneDrive\\Documentos\\Proyectos\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj": {
+    "C:\\Users\\augus\\OneDrive\\Documentos\\Proyecto Final\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\augus\\OneDrive\\Documentos\\Proyectos\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj",
+        "projectUniqueName": "C:\\Users\\augus\\OneDrive\\Documentos\\Proyecto Final\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj",
         "projectName": "Rodriguez-Camani-Feresin-Backend",
-        "projectPath": "C:\\Users\\augus\\OneDrive\\Documentos\\Proyectos\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj",
+        "projectPath": "C:\\Users\\augus\\OneDrive\\Documentos\\Proyecto Final\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj",
         "packagesPath": "C:\\Users\\augus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\augus\\OneDrive\\Documentos\\Proyectos\\Rodriguez-Camani-Feresin-Backend\\obj\\",
+        "outputPath": "C:\\Users\\augus\\OneDrive\\Documentos\\Proyecto Final\\Rodriguez-Camani-Feresin-Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\augus\\AppData\\Roaming\\NuGet\\NuGet.Config",
