@@ -17,7 +17,11 @@ namespace Rodriguez_Camani_Feresin_Backend.Services.Implementations
             _mapper = mapper;
             _appointmentScheduleAdapter = appointmentScheduleAdapter;
         }
-
+        public IEnumerable<Appointment> GetAvailableBarberAppointmentsByDate(int barberId, DateTime dateTime)
+        {
+            var appointments = _appointmentRepository.GetAvailableBarberAppointmentsByDate(barberId, dateTime);
+            return _mapper.Map<IEnumerable<Appointment>>(appointments);
+        }
         public IEnumerable<AppointmentDTO> GetAppointmentsByBarberId(int barberId)
         {
             var appointments = _appointmentRepository.GetAppointmentByBarberId(barberId);
