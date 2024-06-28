@@ -733,3 +733,9 @@ C:\Users\augus\OneDrive\Documentos\Proyectos\Rodriguez-Camani-Feresin-Backend\bi
 C:\Users\augus\OneDrive\Documentos\Proyectos\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
 C:\Users\augus\OneDrive\Documentos\Proyectos\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.dll
 C:\Users\augus\OneDrive\Documentos\Proyectos\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+C:\Users\Fer\Desktop\Projects\En Proceso\TPI-BACK\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\Fer\Desktop\Projects\En Proceso\TPI-BACK\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Moq.dll
+C:\Users\Fer\Desktop\Projects\En Proceso\TPI-BACK\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Scrutor.dll
+C:\Users\Fer\Desktop\Projects\En Proceso\TPI-BACK\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\Fer\Desktop\Projects\En Proceso\TPI-BACK\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\Fer\Desktop\Projects\En Proceso\TPI-BACK\Rodriguez-Camani-Feresin-Backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
