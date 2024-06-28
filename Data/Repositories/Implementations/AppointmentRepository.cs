@@ -8,25 +8,24 @@ namespace Rodriguez_Camani_Feresin_Backend.Data.Repositories.Implementations
         public AppointmentRepository(DbContextCFR context) : base(context)
         {
         }
-        public IEnumerable<Appointment> GetAvailableBarberAppointmentsByDate()
+        public IEnumerable<Appointment> GetAvailableBarberAppointmentsByDate(int barberId , DateTime dateTime)
         {
-            throw new NotImplementedException();
+           return _context.Appointments.Where(a => a.BarberId == barberId && a.BarberAvailability.DayOfTheWeek.Equals(dateTime.DayOfWeek));
+        }
+
+        public Appointment GetAppointmentById(int appointmentId)
+        {
+            return _context.Appointments.SingleOrDefault(a => a.AppointmentId == appointmentId);
         }
         public void CreateAppointment(Appointment appointment)
         {
-            throw new NotImplementedException();
-            //_context.Appointments.Add(appointment);
-            //_context.SaveChanges();
+            _context.Add(appointment);
+            _context.SaveChanges();
         }
         public void DeleteUserById(int appointmentid)
         {
-            throw new NotImplementedException();
-            //var appointmentToDelete = _context.Appointments.Find(appointmentId);
-            //if (appointmentToDelete != null)
-            //{
-            //    _context.Appointments.Remove(appointmentToDelete);
-            //    _context.SaveChanges();
-            //}
+            _context.Remove(GetAppointmentById(appointmentid));
+            _context.SaveChanges();
         }
     }
 }
