@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Rodriguez_Camani_Feresin_Backend;
 using Rodriguez_Camani_Feresin_Backend.Models;
-
+using Xunit;
 namespace Rodriguez_Camani_Tests
 {
     public class RodriguezCamaniTests
