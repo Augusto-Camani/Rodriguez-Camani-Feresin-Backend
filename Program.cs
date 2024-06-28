@@ -112,6 +112,10 @@ builder.Services.AddScoped<IValidationService, ValidationService>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 #endregion
 
+#region Adapters
+builder.Services.AddScoped<IAppointmentScheduleAdapter, AppointmentScheduleAdapter>();
+#endregion
+
 #region Factories
 builder.Services.AddScoped<IBarberScheduleFactory, BarberScheduleFactory>();
 #endregion

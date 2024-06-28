@@ -9,11 +9,13 @@ namespace Rodriguez_Camani_Feresin_Backend.Services.Implementations
     {
         private readonly IAppointmentRepository _appointmentRepository;
         private readonly IMapper _mapper;
+        private readonly IAppointmentScheduleAdapter _appointmentScheduleAdapter;
 
-        public AppointmentService(IAppointmentRepository appointmentRepository, IMapper mapper)
+        public AppointmentService(IAppointmentRepository appointmentRepository,IMapper mapper,IAppointmentScheduleAdapter appointmentScheduleAdapter)
         {
             _appointmentRepository = appointmentRepository;
             _mapper = mapper;
+            _appointmentScheduleAdapter = appointmentScheduleAdapter;
         }
 
         public IEnumerable<AppointmentDTO> GetAppointmentsByBarberId(int barberId)
@@ -22,10 +24,9 @@ namespace Rodriguez_Camani_Feresin_Backend.Services.Implementations
             return _mapper.Map<IEnumerable<AppointmentDTO>>(appointments);
         }
 
-        public IEnumerable<AppointmentDTO> GetAppointmentsByBarberAndDate(int barberId, DateTime date)
+        public IEnumerable<AppointmentSlotDTO> GetAppointmentsByBarberAndDate(int barberId, DateTime date)
         {
-            var appointments = _appointmentRepository.GetAvailableBarberAppointmentsByDate(barberId, date);
-            return _mapper.Map<IEnumerable<AppointmentDTO>>(appointments);
+            return _appointmentScheduleAdapter.GetAvailableSlotsForBarberAndDate(barberId, date);
         }
 
         public AppointmentDTO GetAppointmentById(int appointmentId)
@@ -44,5 +45,6 @@ namespace Rodriguez_Camani_Feresin_Backend.Services.Implementations
         {
             _appointmentRepository.DeleteAppointment(appointmentId);
         }
+
     }
 }
