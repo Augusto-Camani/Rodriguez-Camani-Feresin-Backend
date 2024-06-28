@@ -9,30 +9,40 @@ namespace Rodriguez_Camani_Feresin_Backend.Services.Implementations
     {
         private readonly IAppointmentRepository _appointmentRepository;
         private readonly IMapper _mapper;
+
         public AppointmentService(IAppointmentRepository appointmentRepository, IMapper mapper)
         {
             _appointmentRepository = appointmentRepository;
             _mapper = mapper;
+        }
 
-        }
-        public IEnumerable<Appointment> GetAvailableBarberAppointmentsByDate(int barberId, DateTime dateTime)
+        public IEnumerable<AppointmentDTO> GetAppointmentsByBarberId(int barberId)
         {
-            return _appointmentRepository.GetAvailableBarberAppointmentsByDate(barberId, dateTime);
+            var appointments = _appointmentRepository.GetAppointmentByBarberId(barberId);
+            return _mapper.Map<IEnumerable<AppointmentDTO>>(appointments);
         }
-        public void CreateAppointment(AppointmentDTO appointmentDTO)
-        {   
-            var newAppointment = _mapper.Map<Appointment>(appointmentDTO);
+
+        public IEnumerable<AppointmentDTO> GetAppointmentsByBarberAndDate(int barberId, DateTime date)
+        {
+            var appointments = _appointmentRepository.GetAvailableBarberAppointmentsByDate(barberId, date);
+            return _mapper.Map<IEnumerable<AppointmentDTO>>(appointments);
+        }
+
+        public AppointmentDTO GetAppointmentById(int appointmentId)
+        {
+            var appointment = _appointmentRepository.GetAppointmentById(appointmentId);
+            return _mapper.Map<AppointmentDTO>(appointment);
+        }
+
+        public void CreateAppointment(AppointmentDTO appointmentCreateDTO)
+        {
+            var newAppointment = _mapper.Map<Appointment>(appointmentCreateDTO);
             _appointmentRepository.CreateAppointment(newAppointment);
         }
 
         public void DeleteAppointment(int appointmentId)
         {
-            _appointmentRepository.DeleteUserById(appointmentId);
-        }
-
-        public Appointment GetAppointmentById(int appointmentId)
-        {
-            return _appointmentRepository.GetAppointmentById(appointmentId);
+            _appointmentRepository.DeleteAppointment(appointmentId);
         }
     }
 }

@@ -17,12 +17,17 @@ namespace Rodriguez_Camani_Feresin_Backend.Data.Repositories.Implementations
         {
             return _context.Appointments.SingleOrDefault(a => a.AppointmentId == appointmentId);
         }
+
+        public Appointment GetAppointmentByBarberId(int barberId)
+        {
+            return _context.Appointments.SingleOrDefault(a => a.BarberId == barberId);
+        }
         public void CreateAppointment(Appointment appointment)
         {
             _context.Add(appointment);
             _context.SaveChanges();
         }
-        public void DeleteUserById(int appointmentid)
+        public void DeleteAppointment(int appointmentid)
         {
             _context.Remove(GetAppointmentById(appointmentid));
             _context.SaveChanges();
