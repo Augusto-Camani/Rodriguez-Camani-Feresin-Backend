@@ -3,31 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26EB40A6-D231-4ABF-BDB2-6D20E980C938}|..\\Rodriguez-Camani-Tests\\Rodriguez-Camani-Tests.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-tests\\tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C5C46A6-FB7E-4D03-A9A1-7D03E6101ED2}|Rodriguez-Camani-Tests\\Rodriguez-Camani-Tests.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\rodriguez-camani-tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C5C46A6-FB7E-4D03-A9A1-7D03E6101ED2}|Rodriguez-Camani-Tests\\Rodriguez-Camani-Tests.csproj|solutionrelative:rodriguez-camani-tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\services\\implementations\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:services\\implementations\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\services\\interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:services\\interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\controllers\\barberschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:controllers\\barberschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|c:\\users\\fer\\desktop\\projects\\en proceso\\tpi-back\\rodriguez-camani-feresin-backend\\rodriguez-camani-feresin-backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{34B60500-8345-4774-86E1-969D5DE034A9}|Rodriguez-Camani-Feresin-Backend.csproj|solutionrelative:rodriguez-camani-feresin-backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,79 +23,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Tests.cs",
-              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Tests\\Tests.cs",
-              "RelativeDocumentMoniker": "..\\Rodriguez-Camani-Tests\\Tests.cs",
-              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Tests\\Tests.cs",
-              "RelativeToolTip": "..\\Rodriguez-Camani-Tests\\Tests.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABKAAAA",
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "Rodriguez-Camani-Tests\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Tests\\UnitTest1.cs",
+              "RelativeToolTip": "Rodriguez-Camani-Tests\\UnitTest1.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBMAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T04:59:28.942Z",
+              "WhenOpened": "2024-06-28T14:42:05.752Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BarberScheduleController.cs",
-              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Controllers\\BarberScheduleController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BarberScheduleController.cs",
-              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Controllers\\BarberScheduleController.cs",
-              "RelativeToolTip": "Controllers\\BarberScheduleController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T04:47:25.573Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAuwEMAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T04:39:31.973Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppointmentController.cs",
-              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Controllers\\AppointmentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AppointmentController.cs",
-              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Controllers\\AppointmentController.cs",
-              "RelativeToolTip": "Controllers\\AppointmentController.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAMwCoAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T04:25:21.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IAppointmentService.cs",
-              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Services\\Interfaces\\IAppointmentService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IAppointmentService.cs",
-              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Services\\Interfaces\\IAppointmentService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IAppointmentService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T04:29:54.189Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppointmentService.cs",
-              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Services\\Implementations\\AppointmentService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\AppointmentService.cs",
-              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Services\\Implementations\\AppointmentService.cs",
-              "RelativeToolTip": "Services\\Implementations\\AppointmentService.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAwwCwAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T04:29:25.622Z",
+              "DocumentIndex": 1,
+              "Title": "Rodriguez-Camani-Feresin-Backend",
+              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj",
+              "RelativeDocumentMoniker": "Rodriguez-Camani-Feresin-Backend.csproj",
+              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Rodriguez-Camani-Feresin-Backend.csproj",
+              "RelativeToolTip": "Rodriguez-Camani-Feresin-Backend.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-28T14:45:47.662Z",
               "EditorCaption": ""
             },
             {
@@ -136,19 +66,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Fer\\Desktop\\Projects\\En Proceso\\TPI-BACK\\Rodriguez-Camani-Feresin-Backend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAGwAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T04:34:49.673Z",
-              "EditorCaption": ""
             }
           ]
         },
