@@ -38,7 +38,7 @@ Para instalar y ejecutar la aplicación localmente, debes seguir estos pequeños
     dotnet build
     ```
 
-4. Inicia la aplicación (Asegura de modificar los puertos LocalHost, donde correrá la app, por el puerto deseado):
+4. Inicia la aplicación (Asegurate de modificar los puertos LocalHost, donde correrá la app, por el puerto deseado):
     ```sh
     dotnet run
     ```
